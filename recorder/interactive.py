@@ -134,7 +134,7 @@ def cli(*args):
 # The hardware and the machine's name never show: blurred wherever they appear on a page.
 BLUR = r"""(() => {
   if (window.__saifBlur) return; window.__saifBlur = true;
-  const RE = /(on a |an? )?(NVIDIA )?DGX Spark|spark-8528(\.local)?/g;
+  const RE = /(on a |an? )?(NVIDIA )?DGX Spark|spark-8528(\.local)?|(NVIDIA )?GB10( Grace Blackwell)?/g;
   const wrap = (node) => {
     const text = node.nodeValue; RE.lastIndex = 0;
     if (!RE.test(text) || node.parentElement?.closest('[data-saif-blur], script, style, textarea')) return;
@@ -164,7 +164,7 @@ def segment(slug, name, url):
     out = ROOT / "recordings" / slug / name
     shutil.rmtree(out, ignore_errors=True)
     started = cli("capture", "start", url, "--name", f"{slug}-{name}", "--connect-to-browser", CDP,
-                  "--no-video", "--compress-images")
+                  "--no-video", "--no-zoom", "--compress-images")
     session = started["session"]["id"]
     b = Tab(started["tab"]["targetId"])
     b.call("Page.addScriptToEvaluateOnNewDocument", source=BLUR)
@@ -181,6 +181,8 @@ def segment(slug, name, url):
     finally:
         with contextlib.suppress(Exception):
             b.ws.close()
+        with contextlib.suppress(Exception):  # the capture leaves its tab open
+            urllib.request.urlopen(f"{CDP}/json/close/{b.target}")
 
 
 def shot(b, target_js, wait_js=None, timeout=900):

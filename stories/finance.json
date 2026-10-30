@@ -1,109 +1,160 @@
 {
   "title": "Fraud detection & investigation",
-  "subtitle": "SUSE AI Factory with NVIDIA \u00b7 Banking",
+  "subtitle": "SUSE AI Factory with NVIDIA · Banking",
   "intro": "A bank's payments are scored by its own fraud model. An AI agent built with the NeMo Agent Toolkit and NVIDIA Nemotron investigates every alert inside an NVIDIA OpenShell sandbox. It opens cases; only the analyst confirms a case or blocks an account. Customer data never leaves the bank.",
   "chapters": [
     {
       "id": "flow",
-      "title": "The Blueprint flow",
-      "blurb": "Fraud Detection & Investigation is a Blueprint in SUSE AI Factory with NVIDIA. The Studio shows what it is made of: the bank's systems, the agent in its NVIDIA OpenShell sandbox, the shared NVIDIA models, and the people who decide.",
+      "title": "The architecture",
+      "blurb": "Fraud Detection & Investigation is a Blueprint in SUSE AI Factory with NVIDIA. The Studio shows what it is made of.",
       "segments": [
         {
           "name": "flow",
           "steps": {
             "1": {
-              "text": "The whole use case on one canvas: payments and core banking on the left, the agent in its **NVIDIA OpenShell sandbox** in the middle, **NVIDIA Nemotron** on the right. Green lines are allowed, red ones refused by the sandbox's policy.",
-              "zoom": {
-                "zoom": 1.7,
-                "x": 0.36,
-                "y": 0.52
-              },
-              "x": 0.36,
-              "y": 0.42,
-              "variant": "pointer"
+              "text": "The architecture of **Fraud Detection & Investigation**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy."
             },
             "2": {
-              "text": "The **fraud investigation agent**: a NeMo Agent Toolkit agent with XGBoost scoring and SHAP explanations, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it."
+              "text": "The **agent**: a NeMo Agent Toolkit agent, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it."
             },
             "3": {
-              "text": "It reasons with **NVIDIA Nemotron 3.5 Lightning**, a NIM shared by every use case from the *NVIDIA Models (shared)* Blueprint: downloaded once, always up."
+              "text": "It reasons with an **NVIDIA NIM** shared by every use case from the *NVIDIA Models (shared)* Blueprint: downloaded once, always up."
             },
             "4": {
-              "text": "Everything else is **outside**: the sandbox refuses any other host, and it can't block an account. Enforced by policy, not promised in a prompt."
+              "text": "Everything else is **outside**: the sandbox refuses it. Enforced by policy, not promised in a prompt."
             }
           }
         }
       ]
     },
     {
-      "id": "ai-factory",
-      "title": "SUSE AI Factory with NVIDIA",
-      "blurb": "One click deploys the Blueprint through SUSE AI Factory with NVIDIA, on the customer's own infrastructure. Then the agent goes to work.",
+      "id": "saif",
+      "title": "Deploy with SUSE AI Factory with NVIDIA",
+      "blurb": "It is a Blueprint in SUSE AI Factory with NVIDIA. The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API. Here it deploys the Blueprint.",
+      "segments": [
+        {
+          "name": "saif",
+          "steps": {
+            "1": {
+              "text": "The Blueprints of **SUSE AI Factory with NVIDIA**, SUSE's and its partners'. Open **Fraud Detection & Investigation**."
+            },
+            "2": {
+              "text": "What the Blueprint brings: its versions, its description and its applications. **Install** it."
+            },
+            "3": {
+              "text": "The install wizard: the instance's name and its default namespace."
+            },
+            "4": {
+              "text": "Where it runs: a **Fleet Bundle** on the selected cluster."
+            },
+            "5": {
+              "text": "Each component's configuration can be changed here, or left as the Blueprint ships it."
+            },
+            "6": {
+              "text": "Review, then **Install**."
+            },
+            "7": {
+              "text": "**Install**: SUSE AI Factory with NVIDIA schedules the Blueprint on the cluster, through Fleet."
+            },
+            "8": {
+              "drop": true
+            },
+            "9": {
+              "drop": true
+            },
+            "10": {
+              "text": "**Fraud Detection & Investigation** is now a workload of SUSE AI Factory with NVIDIA, its components rolling out."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fleet",
+      "title": "Rolled out by Fleet",
+      "blurb": "SUSE AI Factory with NVIDIA deploys through Fleet, Rancher's GitOps engine: the same Blueprint on one cluster or many.",
+      "segments": [
+        {
+          "name": "fleet",
+          "steps": {
+            "1": {
+              "text": "In **Continuous Delivery**, Fleet holds one bundle per component of **Fraud Detection & Investigation**, each active on its cluster."
+            },
+            "2": {
+              "text": "One bundle in detail: the Kubernetes resources it deployed, and their state.",
+              "x": 0.62,
+              "y": 0.42
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "title": "The use case at work",
+      "blurb": "The use case's own page, step by step: what the agent does, and what it is not allowed to do.",
       "segments": [
         {
           "name": "device",
           "steps": {
             "1": {
-              "text": "The use case's page on the platform. **Deploy the use case** deploys the Blueprint through SUSE AI Factory with NVIDIA: its components and the agent's NVIDIA OpenShell sandbox."
+              "text": "The use case's own page: the Blueprint is **ready** in SUSE AI Factory with NVIDIA and the agent's sandbox is up. The log on the right is OpenShell's: every request the agent makes, allowed or denied."
             },
             "2": {
-              "text": "Deployed: the Blueprint is **ready** in SUSE AI Factory with NVIDIA and the agent's sandbox is up. The log on the right is OpenShell's: every request the agent makes, allowed or denied."
-            },
-            "3": {
               "text": "Step by step. First, **score every payment**."
             },
-            "4": {
-              "text": "The bank's fraud model runs **inside the agent's sandbox**: the sandbox is the bank's data boundary, written as policy. Running now."
+            "3": {
+              "text": "The bank's fraud model runs **inside the agent's sandbox**: the sandbox is the bank's data boundary, written as policy. **Run it here**."
             },
-            "5": {
+            "4": {
               "text": "About 1,500 payments scored in a fraction of a second; the risky ones are above the threshold."
             },
-            "6": {
+            "5": {
               "text": "Next: why was a payment flagged, and why wasn't another?"
             },
-            "7": {
-              "text": "A score alone doesn't help the analyst. **SHAP** explains each alert: running now."
+            "6": {
+              "text": "A score alone doesn't help the analyst. **SHAP** explains each alert."
             },
-            "8": {
+            "7": {
               "text": "A new device, tiny test charges, money passed on within the hour: the reasons behind each alert."
             },
-            "9": {
+            "8": {
               "text": "And the traveller in Lisbon?"
             },
-            "10": {
+            "9": {
               "text": "Not flagged: there is a travel notice on file. Fewer false alarms for the analyst."
             },
-            "11": {
+            "10": {
               "text": "Now the agent works the alerts on its own."
             },
-            "12": {
+            "11": {
               "text": "A **NeMo Agent Toolkit** agent on **NVIDIA Nemotron 3.5 Lightning** plans and calls the tools: it reads each case, screens payees against the sanctions list, and opens one case per pattern."
             },
-            "13": {
+            "12": {
               "text": "The cases it opened, each waiting for the analyst's review. Every tool call shows up in the OpenShell log, allowed."
             },
-            "14": {
+            "13": {
               "text": "Can the agent block the account itself?"
             },
-            "15": {
+            "14": {
               "text": "Let it try: the agent asks core banking to block the account."
             },
-            "16": {
+            "15": {
               "text": "**403, policy denied.** NVIDIA OpenShell refuses the request before the bank ever sees it: enforced by policy, not promised in a prompt."
             },
-            "17": {
+            "16": {
               "text": "The report, and the data boundary."
             },
-            "18": {
+            "17": {
               "text": "The agent files the **daily fraud report** in core banking."
             },
-            "19": {
+            "18": {
               "text": "The report: the cases, the money at risk, and the decisions left to the analyst."
             },
-            "20": {
+            "19": {
               "text": "Last: can the agent reach the internet?"
             },
-            "21": {
+            "20": {
               "text": "**Blocked**, every time, and logged in red. The bank's data stays on the customer's own infrastructure."
             }
           }
@@ -112,20 +163,28 @@
     },
     {
       "id": "rancher",
-      "title": "In the Rancher Prime UI",
-      "blurb": "It is a Blueprint in SUSE AI Factory with NVIDIA. The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API: administrators see and manage every deployed Blueprint from here.",
+      "title": "Into Rancher",
+      "blurb": "From SUSE AI Factory with NVIDIA into Rancher, to understand the workload: its resources, its namespace, its pods.",
       "segments": [
         {
           "name": "rancher",
           "steps": {
             "1": {
-              "text": "The **SUSE AI Factory with NVIDIA** overview in the Rancher Prime UI: workloads, their health and the active Blueprints. Open **Workloads**."
+              "text": "Back in SUSE AI Factory with NVIDIA: open the **Fraud Detection & Investigation** workload."
             },
             "2": {
-              "text": "Every Blueprint deployed through SUSE AI Factory with NVIDIA, with its namespace, version and lifecycle actions. Here, **Fraud Detection & Investigation**: its source Blueprint, its version and where it runs."
+              "text": "Its details: the Blueprint and version it comes from, where it runs, and the Fleet resources underneath. From here, straight into Rancher."
             },
             "3": {
-              "drop": true
+              "text": "The use case's namespace in Rancher: every resource, its state. Open **Workloads**."
+            },
+            "4": {
+              "text": "The use case's workloads. Open one."
+            },
+            "5": {
+              "text": "The deployment and its pods, live, with everything Rancher offers to inspect and operate it.",
+              "x": 0.3,
+              "y": 0.45
             }
           }
         }
@@ -134,37 +193,19 @@
     {
       "id": "observability",
       "title": "SUSE Observability",
-      "blurb": "SUSE Observability sees the Blueprint, its flow, the agent's every step and the models: health, traces with prompts and tokens, and what OpenShell allowed and refused.",
+      "blurb": "SUSE Observability shows the Blueprint's workload as it is right now: its health, its events and its flow.",
       "segments": [
         {
           "name": "observability",
           "steps": {
             "1": {
-              "text": "Every Blueprint deployed through SUSE AI Factory with NVIDIA, with its health. Open **Fraud Detection & Investigation**."
+              "text": "**SUSE Observability** lists every Blueprint deployed through SUSE AI Factory with NVIDIA, with its health. Open **Fraud Detection & Investigation**."
             },
             "2": {
-              "text": "The Blueprint as a component: its health and events, with links to the agent's traces and to **Flow: what it is made of**."
+              "text": "The Blueprint as a component, right now: its health and events, with links to the agent's traces and to **Flow: what it is made of**."
             },
             "3": {
-              "text": "The same flow as in the Studio, live: the agent, core banking and NVIDIA Nemotron, each coloured by its health."
-            },
-            "4": {
-              "text": "The agent's traces. The last one is named after the analyst's request, *Work today's fraud alerts*; the red ones are the requests OpenShell refused."
-            },
-            "5": {
-              "text": "Inside the trace: every model call and tool call, in order, with its timing."
-            },
-            "6": {
-              "drop": true
-            },
-            "7": {
-              "text": "One model call in detail: the prompt, the answer, the model and the tokens used. An audit trail of what the agent did with the bank's data."
-            },
-            "8": {
-              "text": "The NVIDIA models serving the platform, and their health."
-            },
-            "9": {
-              "text": "The live dashboard: agent requests **allowed** and **denied** by NVIDIA OpenShell, tokens, time to first token, GPU."
+              "text": "The same flow as in the Studio, live: each running component coloured by its health."
             }
           }
         }
@@ -173,7 +214,7 @@
   ],
   "outro": {
     "title": "Decisions stay with the analyst",
-    "description": "A fraud model and NVIDIA Nemotron in NVIDIA OpenShell, deployed as a Blueprint through SUSE AI Factory with NVIDIA on the customer's own infrastructure, managed in the Rancher Prime UI and watched by SUSE Observability."
+    "description": "A fraud model and NVIDIA Nemotron in NVIDIA OpenShell, deployed as a Blueprint by SUSE AI Factory with NVIDIA through Fleet on the customer's own infrastructure, operated in Rancher and watched by SUSE Observability."
   },
   "id": "XR3p15HVydmE"
 }

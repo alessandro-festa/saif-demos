@@ -90,3 +90,16 @@ header.demo-page-bar {
   border-radius: 0 !important;
   background: url("../brand/suse-geeko.png") center / contain no-repeat !important;
 }
+
+/* A bigger player: the product fills the page, whatever the screen (Inkly caps it at 1100px). */
+header.demo-page-bar {
+  height: 48px;
+}
+
+#root .demo-player {
+  max-width: none !important;
+  width: min(
+    calc(100% - 24px),
+    calc((100cqh - 24px - var(--demo-vertical-chrome-h, 0px)) * var(--demo-stage-w, 16) / var(--demo-stage-h, 9))
+  ) !important;
+}

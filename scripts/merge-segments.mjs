@@ -111,8 +111,9 @@ for (const chapter of story.chapters) {
         s.background[key] = `assets/${name}`;
       }
 
-      if (edit.zoom === false) delete s.transform;
-      else if (edit.zoom) s.transform = edit.zoom;
+      // The whole window, always: a step zooms only where the story asks for it.
+      delete s.transform;
+      if (edit.zoom) s.transform = edit.zoom;
 
       const message = (s.annotations ?? []).find((a) => a.type === 'message');
       if (message) {
