@@ -138,8 +138,11 @@ steps.push(
   cover('outro', {
     title: story.outro.title,
     description: story.outro.description,
-    cta: { label: 'Back to all demos', action: { type: 'url', href: story.outro.href ?? '../', target: '_self' } },
-    secondaryCta: { label: 'Replay', action: { type: 'restart' } },
+    // An outro may lead on to another demo; the start page stays one click away.
+    cta: { label: story.outro.label ?? 'Back to all demos', action: { type: 'url', href: story.outro.href ?? '../', target: '_self' } },
+    secondaryCta: story.outro.href
+      ? { label: 'All demos', action: { type: 'url', href: '../', target: '_self' } }
+      : { label: 'Replay', action: { type: 'restart' } },
   }),
 );
 

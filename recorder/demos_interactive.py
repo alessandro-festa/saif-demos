@@ -317,6 +317,17 @@ def secops_device():
 
 def record_gitea_merge(demo):
     """The engineer's side in Gitea: the agent's issues, its pull request, the change, the merge."""
+    t = Tab()  # log in first, outside the capture
+    try:
+        t.go(f"{record.GITEA}/user/login", settle=3)
+        if t.js("!!document.querySelector('#password')"):
+            g = json.load(urllib.request.urlopen(f"{record.DEVICE}/api/v1/gitea", timeout=30))
+            t.type_into("document.querySelector('#user_name')", g["username"])
+            t.type_into("document.querySelector('#password')", g["password"])
+            t.js("document.querySelector('#password').form.submit()")
+            time.sleep(4)
+    finally:
+        t.close()
     with segment(demo, "gitea", f"{record.GITEA}/{demos.ESTATE}/issues") as b:
         time.sleep(4)
         shot(b, "document.querySelector('#issue-list, .issue.list, .flex-list')")
@@ -387,7 +398,7 @@ def last_msg(side):
     return f"[...document.querySelectorAll('.chat.{side} .msg')].at(-1)"
 
 
-def wait_answer(b, side, timeout=600):
+def wait_answer(b, side, timeout=1500):
     """Until the agent has answered in that chat (the chat's 'working on it' line gone)."""
     b.wait(THINKING.format(side=side), timeout=30, every=0.5)
     b.wait(f"!({THINKING.format(side=side)})", timeout=timeout, every=2)

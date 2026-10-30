@@ -1,0 +1,103 @@
+{
+  "title": "SUSE AI Factory for developers",
+  "subtitle": "SUSE AI Factory with NVIDIA · Platform",
+  "intro": "A tour of the platform from a developer's seat: ready-made Blueprints, what is running and how to reach it, Blueprints drawn and configured in the Studio, then SUSE AI Factory with NVIDIA in the Rancher Prime UI, and SUSE Observability.",
+  "chapters": [
+    {
+      "id": "developer",
+      "title": "The developer's side",
+      "blurb": "SUSE AI Factory for Developers: the platform at a glance, a catalog of Blueprints, a Workspace with what is deployed, and a Studio to compose new ones.",
+      "segments": [
+        {
+          "name": "device",
+          "steps": {
+            "1": {
+              "text": "The platform at a glance: the GPU, memory and disk, live, and every layer of the stack, from Rancher and SUSE AI Factory with NVIDIA to the NVIDIA GPU Operator and OpenShell."
+            },
+            "2": {
+              "text": "Open the **Catalog**."
+            },
+            "3": {
+              "text": "Ready-made Blueprints, SUSE's and the community's: each one deploys with sensible defaults, filtered to what fits this machine."
+            },
+            "4": {
+              "text": "Open the **Workspace**."
+            },
+            "5": {
+              "text": "Everything deployed, explained in plain terms: what it does, how to reach it. Shared pieces, such as **NVIDIA Models (shared)**, serve every use case."
+            },
+            "6": {
+              "text": "Open the **Studio**, and a Blueprint in it."
+            },
+            "7": {
+              "text": "A Blueprint, drawn: the agent in its NVIDIA OpenShell sandbox, the systems it works with, the NVIDIA models, the people who decide. Green lines are allowed, red ones refused."
+            },
+            "8": {
+              "text": "Every box is configurable: here the agent, its image, its sandbox, its providers and policy. Open **YAML**."
+            },
+            "9": {
+              "text": "The Blueprint as code: versioned, exported, moved between platforms, and deployed through SUSE AI Factory with NVIDIA."
+            },
+            "10": {
+              "drop": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "saif",
+      "title": "SUSE AI Factory with NVIDIA",
+      "blurb": "The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API: where administrators install Blueprints and manage their lifecycle.",
+      "segments": [
+        {
+          "name": "saif",
+          "steps": {
+            "1": {
+              "text": "The **SUSE AI Factory with NVIDIA** overview: workloads, their health, the active Blueprints. Open **Apps**."
+            },
+            "2": {
+              "text": "The applications SUSE AI Factory with NVIDIA can deploy, from the SUSE Application Collection and partners. Open **Blueprints**."
+            },
+            "3": {
+              "text": "Blueprints: whole use cases, several applications configured to work together, SUSE's and its partners'. Open **Workloads**."
+            },
+            "4": {
+              "text": "Every Blueprint deployed, on which cluster, with its lifecycle: open in Rancher, upgrade, manage.",
+              "x": 0.55,
+              "y": 0.4
+            },
+            "5": {
+              "drop": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "SUSE Observability",
+      "blurb": "SUSE Observability watches what SUSE AI Factory with NVIDIA deploys.",
+      "segments": [
+        {
+          "name": "observability",
+          "steps": {
+            "1": {
+              "text": "Every Blueprint deployed through SUSE AI Factory with NVIDIA, with its state and health."
+            },
+            "2": {
+              "text": "The models serving the platform, NVIDIA NIMs and vLLM, with their health."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "outro": {
+    "title": "See it at work",
+    "description": "Every use case on this page is a Blueprint like the one you just saw. Start with the Developer Sandbox, or pick any demo.",
+    "href": "../developer-sandbox/",
+    "label": "Open the Developer Sandbox"
+  },
+  "id": "1nJ6vPInwPI3"
+}
