@@ -202,6 +202,11 @@ ROWS = ("[...document.querySelectorAll('.ag-center-cols-container .ag-row')].fil
 
 def record_security(demo, name, namespace, row=None):
     """SUSE Security: every container it scans, the use case's filtered, one container's vulnerabilities."""
+    t = Tab()  # its session expires: log in first, outside the capture
+    try:
+        pv.security_login(t)
+    finally:
+        t.close()
     with segment(demo, name, record.SECURITY + "/#/workloads") as b:
         b.wait(f"!!({pv.FILTER})", timeout=90)
         time.sleep(4)

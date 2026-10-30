@@ -1,0 +1,178 @@
+{
+  "title": "Traffic incident management",
+  "subtitle": "SUSE AI Factory with NVIDIA · Smart city",
+  "intro": "Four road cameras watched by NVIDIA Cosmos Reason2. An AI agent built with the NeMo Agent Toolkit and NVIDIA Nemotron spots accidents, people in danger and illegal parking, and asks the control-room operator what to do. The operator decides; the agent can't, enforced by its NVIDIA OpenShell sandbox.",
+  "chapters": [
+    {
+      "id": "flow",
+      "title": "The architecture",
+      "blurb": "Traffic Incident Management is a Blueprint in SUSE AI Factory with NVIDIA. The Studio shows what it is made of.",
+      "segments": [
+        {
+          "name": "flow",
+          "steps": {
+            "1": {
+              "text": "The architecture of **Traffic Incident Management**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy."
+            },
+            "2": {
+              "text": "The **agent**: a NeMo Agent Toolkit agent, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it."
+            },
+            "3": {
+              "text": "It reasons with an **NVIDIA NIM** shared by every use case from the *NVIDIA Models (shared)* Blueprint: downloaded once, always up."
+            },
+            "4": {
+              "text": "Everything else is **outside**: the sandbox refuses it. Enforced by policy, not promised in a prompt."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "saif",
+      "title": "Deploy with SUSE AI Factory with NVIDIA",
+      "blurb": "It is a Blueprint in SUSE AI Factory with NVIDIA. The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API. Here it deploys the Blueprint.",
+      "segments": [
+        {
+          "name": "saif",
+          "steps": {
+            "1": {
+              "text": "The Blueprints of **SUSE AI Factory with NVIDIA**, SUSE's and its partners'. Open **Traffic Incident Management**."
+            },
+            "2": {
+              "text": "What the Blueprint brings: its versions, its description and its applications. **Install** it."
+            },
+            "3": {
+              "text": "The install wizard: the instance's name and its default namespace."
+            },
+            "4": {
+              "text": "Where it runs: a **Fleet Bundle** on the selected cluster."
+            },
+            "5": {
+              "text": "Each component's configuration can be changed here, or left as the Blueprint ships it."
+            },
+            "6": {
+              "text": "Review, then **Install**."
+            },
+            "7": {
+              "text": "**Install**: SUSE AI Factory with NVIDIA schedules the Blueprint on the cluster, through Fleet."
+            },
+            "8": {
+              "drop": true
+            },
+            "9": {
+              "drop": true
+            },
+            "10": {
+              "text": "**Traffic Incident Management** is now a workload of SUSE AI Factory with NVIDIA, its components rolling out."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fleet",
+      "title": "Rolled out by Fleet",
+      "blurb": "SUSE AI Factory with NVIDIA deploys through Fleet, Rancher's GitOps engine: the same Blueprint on one cluster or many.",
+      "segments": [
+        {
+          "name": "fleet",
+          "steps": {
+            "1": {
+              "text": "In **Continuous Delivery**, Fleet holds one bundle per component of **Traffic Incident Management**, each active on its cluster."
+            },
+            "2": {
+              "text": "One bundle in detail: the Kubernetes resources it deployed, and their state.",
+              "x": 0.62,
+              "y": 0.42
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "title": "The use case at work",
+      "blurb": "The use case's own page, step by step: what the agent does, and what it is not allowed to do.",
+      "segments": [
+        {
+          "name": "device",
+          "steps": {
+            "1": {
+              "text": "The control room: four live road cameras. Every few seconds **NVIDIA Cosmos Reason2** describes each one: a normal motorway, an overturned truck, pedestrians in danger, a van parked where it shouldn't be."
+            },
+            "2": {
+              "text": "The agent opens incidents and **asks the operator** what to do, with its recommendation: here, a fine for the van."
+            },
+            "3": {
+              "text": "The operator decides: **Open a fine ticket**."
+            },
+            "4": {
+              "text": "The ticket is issued by the operator, and the agent keeps watching the camera. Every request it makes shows in the OpenShell log, allowed."
+            },
+            "5": {
+              "text": "Can the agent decide on its own: call 112, issue the fine, answer for the operator? **Let it try**."
+            },
+            "6": {
+              "text": "**DENY**, every time: NVIDIA OpenShell refuses the agent's attempts in red. Enforced by policy, not promised in a prompt."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "rancher",
+      "title": "Into Rancher",
+      "blurb": "From SUSE AI Factory with NVIDIA into Rancher, to understand the workload: its resources, its namespace, its pods.",
+      "segments": [
+        {
+          "name": "rancher",
+          "steps": {
+            "1": {
+              "text": "Back in SUSE AI Factory with NVIDIA: open the **Traffic Incident Management** workload."
+            },
+            "2": {
+              "text": "Its details: the Blueprint and version it comes from, where it runs, and the Fleet resources underneath. From here, straight into Rancher."
+            },
+            "3": {
+              "text": "The use case's namespace in Rancher: every resource, its state. Open **Workloads**."
+            },
+            "4": {
+              "text": "The use case's workloads. Open one."
+            },
+            "5": {
+              "text": "The deployment and its pods, live, with everything Rancher offers to inspect and operate it.",
+              "x": 0.3,
+              "y": 0.45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "SUSE Observability",
+      "blurb": "SUSE Observability shows the Blueprint's workload as it is right now: its health, its events and its flow.",
+      "segments": [
+        {
+          "name": "observability",
+          "steps": {
+            "1": {
+              "text": "**SUSE Observability** lists every Blueprint deployed through SUSE AI Factory with NVIDIA, with its health. Open **Traffic Incident Management**."
+            },
+            "2": {
+              "text": "The Blueprint as a component, right now: its health and events, with links to the agent's traces and to **Flow: what it is made of**."
+            },
+            "3": {
+              "text": "The same flow as in the Studio, live: each running component coloured by its health."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "outro": {
+    "title": "The operator decides",
+    "description": "NVIDIA Cosmos Reason2 and Nemotron in NVIDIA OpenShell, deployed as a Blueprint by SUSE AI Factory with NVIDIA through Fleet on the city's own infrastructure, operated in Rancher and watched by SUSE Observability."
+  },
+  "id": "3pUOiOt7YZVf"
+}
