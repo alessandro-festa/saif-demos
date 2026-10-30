@@ -1,0 +1,1553 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/npm/@inkly-org/interactive-demo/dist/schema/demo.config.json",
+  "id": "ZvPfzRwwz_Pu",
+  "version": 1,
+  "title": "Developer Sandbox",
+  "subtitle": "SUSE AI Factory with NVIDIA · Developers",
+  "background": {
+    "type": "color",
+    "from": "#0C322C",
+    "to": "#192072"
+  },
+  "theme": {
+    "brand": {
+      "logo": "assets/suse-logo-light.png",
+      "name": "SUSE AI Factory with NVIDIA"
+    }
+  },
+  "chrome": {
+    "controls": "full",
+    "autoplay": false,
+    "branding": false
+  },
+  "chapters": [
+    {
+      "id": "flow",
+      "title": "The architecture",
+      "stepIds": [
+        "flow-cover",
+        "flow-1",
+        "flow-2",
+        "flow-3",
+        "flow-4"
+      ]
+    },
+    {
+      "id": "saif",
+      "title": "Deploy with SUSE AI Factory with NVIDIA",
+      "stepIds": [
+        "saif-cover",
+        "saif-1",
+        "saif-2",
+        "saif-3",
+        "saif-4",
+        "saif-5",
+        "saif-6",
+        "saif-7",
+        "saif-10"
+      ]
+    },
+    {
+      "id": "fleet",
+      "title": "Rolled out by Fleet",
+      "stepIds": [
+        "fleet-cover",
+        "fleet-1",
+        "fleet-2"
+      ]
+    },
+    {
+      "id": "demo",
+      "title": "The use case at work",
+      "stepIds": [
+        "demo-cover",
+        "device-1",
+        "device-2",
+        "device-3",
+        "device-4",
+        "device-5",
+        "device-6",
+        "device-7",
+        "device-8"
+      ]
+    },
+    {
+      "id": "rancher",
+      "title": "Into Rancher",
+      "stepIds": [
+        "rancher-cover",
+        "rancher-1",
+        "rancher-2",
+        "rancher-3",
+        "rancher-4",
+        "rancher-5"
+      ]
+    },
+    {
+      "id": "security",
+      "title": "SUSE Security",
+      "stepIds": [
+        "security-cover",
+        "security-1",
+        "security-2",
+        "security-3",
+        "security-4"
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "SUSE Observability",
+      "stepIds": [
+        "observability-cover",
+        "observability-1",
+        "observability-2",
+        "observability-3"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "intro",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "intro-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Developer Sandbox",
+          "titleColor": "#FFFFFF",
+          "description": "Claude Code, running on the platform's own model (NVIDIA Nemotron 3.5 Lightning) through a model gateway, inside an NVIDIA OpenShell sandbox. Git, the platform's Gitea and GitHub are allowed; everything else is denied. The platform team changes the policy live.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Start",
+            "action": {
+              "type": "next"
+            }
+          },
+          "secondaryCta": {
+            "background": "#FFFFFF1F",
+            "textColor": "#FFFFFF",
+            "animation": "none",
+            "label": "All demos",
+            "action": {
+              "type": "url",
+              "href": "../",
+              "target": "_self"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "cover",
+      "id": "flow-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "flow-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "The architecture",
+          "titleColor": "#FFFFFF",
+          "description": "Developer Sandbox is a Blueprint in SUSE AI Factory with NVIDIA. The Studio shows what it is made of.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "flow-1",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=developer-sandbox-0-1-7",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.49166666666666664,
+          "y": 0.5294401041666666,
+          "text": "The architecture of **Developer Sandbox**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-2",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=developer-sandbox-0-1-7",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4222110748291016,
+          "y": 0.54005861070421,
+          "text": "The **agent**: a NeMo Agent Toolkit agent, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-3",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=developer-sandbox-0-1-7",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.6772558636135525,
+          "y": 0.451671142578125,
+          "text": "It codes with **NVIDIA Nemotron 3.5 Lightning**, a NIM shared by every use case, reached through a model gateway (LiteLLM).",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-4",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=developer-sandbox-0-1-7",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.547327380710178,
+          "y": 0.6210593668619792,
+          "text": "Everything else is **outside**: the sandbox refuses it. Enforced by policy, not promised in a prompt.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "saif-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "saif-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Deploy with SUSE AI Factory with NVIDIA",
+          "titleColor": "#FFFFFF",
+          "description": "It is a Blueprint in SUSE AI Factory with NVIDIA. The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API. Here it deploys the Blueprint.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "saif-1",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints",
+        "title": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.8527777777777777,
+          "y": 0.35369791666666667,
+          "text": "The Blueprints of **SUSE AI Factory with NVIDIA**, SUSE's and its partners'. Open **Developer Sandbox**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-2",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints",
+        "title": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.7733751085069445,
+          "y": 0.4322916666666667,
+          "text": "What the Blueprint brings: its versions, its description and its applications. **Install** it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-3",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=developer-sandbox&version=0.1.7",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.6111111111111112,
+          "y": 0.5305555555555556,
+          "text": "The install wizard: the instance's name and its default namespace.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-4",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=developer-sandbox&version=0.1.7",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9444634331597223,
+          "y": 0.8877777777777778,
+          "text": "Where it runs: a **Fleet Bundle** on the selected cluster.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-5",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=developer-sandbox&version=0.1.7",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9444634331597223,
+          "y": 0.8877777777777778,
+          "text": "Each component's configuration can be changed here, or left as the Blueprint ships it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-6",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-006.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=developer-sandbox&version=0.1.7",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s6_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9444634331597223,
+          "y": 0.8877777777777778,
+          "text": "Review, then **Install**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-7",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-007.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=developer-sandbox&version=0.1.7",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s7_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9421712239583333,
+          "y": 0.8877777777777778,
+          "text": "**Install**: SUSE AI Factory with NVIDIA schedules the Blueprint on the cluster, through Fleet.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-10",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-010.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Workloads",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/workloads",
+        "title": "Rancher Prime - SUSE AI Factory - Workloads",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s10_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.6604031032986111,
+          "y": 0.5345008680555555,
+          "text": "**Developer Sandbox** is now a workload of SUSE AI Factory with NVIDIA, its components rolling out.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "fleet-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "fleet-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Rolled out by Fleet",
+          "titleColor": "#FFFFFF",
+          "description": "SUSE AI Factory with NVIDIA deploys through Fleet, Rancher's GitOps engine: the same Blueprint on one cluster or many.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "fleet-1",
+      "background": {
+        "type": "image",
+        "src": "assets/fleet-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - Continuous Delivery - Bundles",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/_/fleet/fleet.cattle.io.bundle?q=developer-sandbox",
+        "title": "Rancher Prime - Continuous Delivery - Bundles",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4367404513888889,
+          "y": 0.2921701388888889,
+          "text": "In **Continuous Delivery**, Fleet holds one bundle per component of **Developer Sandbox**, each active on its cluster.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "fleet-2",
+      "background": {
+        "type": "image",
+        "src": "assets/fleet-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - Continuous Delivery - Bundle",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/_/fleet/fleet.cattle.io.bundle/fleet-default/developer-sandbox-c-5nhkr-developer-sandbox#resources",
+        "title": "Rancher Prime - Continuous Delivery - Bundle",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.62,
+          "y": 0.42,
+          "text": "One bundle in detail: the Kubernetes resources it deployed, and their state.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "demo-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "demo-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "The use case at work",
+          "titleColor": "#FFFFFF",
+          "description": "A terminal into the sandbox: the developer codes with Claude Code, and the platform team decides what the sandbox may reach.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "device-1",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/developer-sandbox",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3388888888888889,
+          "y": 0.6184375,
+          "text": "A terminal **inside the sandbox**: Claude Code on the platform's model, git and the platform's Gitea. Everything else on the internet is denied by the sandbox's policy.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-2",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/developer-sandbox",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3388888888888889,
+          "y": 0.6184375,
+          "text": "**Claude Code** starts, on **NVIDIA Nemotron 3.5 Lightning**. The OpenShell log on the right already shows what it tried to reach, and what was refused.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-3",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/developer-sandbox",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3388888888888889,
+          "y": 0.6184375,
+          "text": "Asked for FizzBuzz with tests, it writes **fizzbuzz.py** and **test_fizzbuzz.py**, and runs them: all tests pass. Every model call goes through the gateway, allowed.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-4",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/developer-sandbox",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3388888888888889,
+          "y": 0.6184375,
+          "text": "Asked to fetch www.suse.com, it can't: the sandbox refuses the connection, and the **DENY** lines say why.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-5",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/developer-sandbox",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3388888888888889,
+          "y": 0.6184375,
+          "text": "The same from the shell: `curl` gets no connection.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-6",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-006.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/developer-sandbox",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s6_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.7983289930555556,
+          "y": 0.27149305555555553,
+          "text": "The platform team's side: **Change the policy, live** gives the command to allow one website, run on the device, outside the sandbox.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-7",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-007.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/developer-sandbox",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s7_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3388888888888889,
+          "y": 0.4767708333333333,
+          "text": "Policy updated: the same `curl`, in the same session, now gets **HTTP 200**. No restart.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-8",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-008.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/developer-sandbox",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s8_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3388888888888889,
+          "y": 0.4767708333333333,
+          "text": "**Revoke** takes it back, live: the next request is refused again.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "rancher-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "rancher-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Into Rancher",
+          "titleColor": "#FFFFFF",
+          "description": "From SUSE AI Factory with NVIDIA into Rancher, to understand the workload: its resources, its namespace, its pods.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "rancher-1",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Workloads",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/workloads",
+        "title": "Rancher Prime - SUSE AI Factory - Workloads",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.36846788194444446,
+          "y": 0.32625868055555557,
+          "text": "Back in SUSE AI Factory with NVIDIA: open the **Developer Sandbox** workload.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-2",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Workloads",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/workloads",
+        "title": "Rancher Prime - SUSE AI Factory - Workloads",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.7047932942708334,
+          "y": 0.7969140625,
+          "text": "Its details: the Blueprint and version it comes from, where it runs, and the Fleet resources underneath. From here, straight into Rancher.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-3",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - spark-8528 - Namespace",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/c-5nhkr/explorer/namespace/openshell#Resources",
+        "title": "Rancher Prime - spark-8528 - Namespace",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.37310384114583334,
+          "y": 0.4153732638888889,
+          "text": "The use case's namespace in Rancher: every resource, its state. Open **Workloads**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-4",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - spark-8528 - Namespace",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/c-5nhkr/explorer/namespace/openshell#Workloads",
+        "title": "Rancher Prime - spark-8528 - Namespace",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3778049045138889,
+          "y": 0.6445746527777778,
+          "text": "The use case's workloads. Open one.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-5",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - spark-8528 - Deployment",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/c-5nhkr/explorer/apps.deployment/openshell/developer-sandbox-gitea#pods",
+        "title": "Rancher Prime - spark-8528 - Deployment",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3,
+          "y": 0.45,
+          "text": "The deployment and its pods, live, with everything Rancher offers to inspect and operate it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "security-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "security-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "SUSE Security",
+          "titleColor": "#FFFFFF",
+          "description": "SUSE Security scans every container as it starts, the sandbox's included.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "security-1",
+      "background": {
+        "type": "image",
+        "src": "assets/security-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9234375,
+          "y": 0.20944444444444443,
+          "text": "**SUSE Security** lists every container on the cluster with its vulnerabilities.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "security-2",
+      "background": {
+        "type": "image",
+        "src": "assets/security-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.24444444444444444,
+          "y": 0.3322222222222222,
+          "text": "Filtered on the sandboxes' namespace: the developer sandbox and its supervisor.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "security-3",
+      "background": {
+        "type": "image",
+        "src": "assets/security-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.46012098524305556,
+          "y": 0.6177777777777778,
+          "text": "Open **Vulnerabilities** for one of them.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "security-4",
+      "background": {
+        "type": "image",
+        "src": "assets/security-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5815972222222222,
+          "y": 0.8008333333333333,
+          "text": "Its CVEs, by severity, with the package and the fixed version: the sandbox is scanned like any other workload.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "observability-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "observability-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "SUSE Observability",
+          "titleColor": "#FFFFFF",
+          "description": "SUSE Observability shows the Blueprint's workload as it is right now: its health, its events and its flow.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "observability-1",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Blueprints - Views | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/views/urn:stackpack:aif-demos:component-presentation:blueprint",
+        "title": "Blueprints - Views | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.48576117621527776,
+          "y": 0.11666666666666667,
+          "text": "**SUSE Observability** lists every Blueprint deployed through SUSE AI Factory with NVIDIA, with its health. Open **Developer Sandbox**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-2",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Components | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/components/urn:aif:blueprint:developer-sandbox",
+        "title": "Components | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.08726671006944445,
+          "y": 0.615,
+          "text": "The Blueprint as a component, right now: its health and events, with links to the agent's traces and to **Flow: what it is made of**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-3",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Blueprint: Developer Sandbox - Views | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/views/urn:custom:query-view:aif-blueprint-developer-sandbox/topology",
+        "title": "Blueprint: Developer Sandbox - Views | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.48576117621527776,
+          "y": 0.4772222222222222,
+          "text": "The same flow as in the Studio, live: each running component coloured by its health.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "outro",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "outro-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Developers move fast, inside the guardrails",
+          "titleColor": "#FFFFFF",
+          "description": "A coding agent on the platform's own model, in NVIDIA OpenShell, deployed as a Blueprint by SUSE AI Factory with NVIDIA through Fleet, scanned by SUSE Security, operated in Rancher and watched by SUSE Observability.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Back to all demos",
+            "action": {
+              "type": "url",
+              "href": "../",
+              "target": "_self"
+            }
+          },
+          "secondaryCta": {
+            "background": "#FFFFFF1F",
+            "textColor": "#FFFFFF",
+            "animation": "none",
+            "label": "Replay",
+            "action": {
+              "type": "restart"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    }
+  ]
+}

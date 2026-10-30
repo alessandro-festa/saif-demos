@@ -1,0 +1,208 @@
+{
+  "title": "Developer Sandbox",
+  "subtitle": "SUSE AI Factory with NVIDIA · Developers",
+  "intro": "Claude Code, running on the platform's own model (NVIDIA Nemotron 3.5 Lightning) through a model gateway, inside an NVIDIA OpenShell sandbox. Git, the platform's Gitea and GitHub are allowed; everything else is denied. The platform team changes the policy live.",
+  "chapters": [
+    {
+      "id": "flow",
+      "title": "The architecture",
+      "blurb": "Developer Sandbox is a Blueprint in SUSE AI Factory with NVIDIA. The Studio shows what it is made of.",
+      "segments": [
+        {
+          "name": "flow",
+          "steps": {
+            "1": {
+              "text": "The architecture of **Developer Sandbox**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy."
+            },
+            "2": {
+              "text": "The **agent**: a NeMo Agent Toolkit agent, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it."
+            },
+            "3": {
+              "text": "It codes with **NVIDIA Nemotron 3.5 Lightning**, a NIM shared by every use case, reached through a model gateway (LiteLLM)."
+            },
+            "4": {
+              "text": "Everything else is **outside**: the sandbox refuses it. Enforced by policy, not promised in a prompt."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "saif",
+      "title": "Deploy with SUSE AI Factory with NVIDIA",
+      "blurb": "It is a Blueprint in SUSE AI Factory with NVIDIA. The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API. Here it deploys the Blueprint.",
+      "segments": [
+        {
+          "name": "saif",
+          "steps": {
+            "1": {
+              "text": "The Blueprints of **SUSE AI Factory with NVIDIA**, SUSE's and its partners'. Open **Developer Sandbox**."
+            },
+            "2": {
+              "text": "What the Blueprint brings: its versions, its description and its applications. **Install** it."
+            },
+            "3": {
+              "text": "The install wizard: the instance's name and its default namespace."
+            },
+            "4": {
+              "text": "Where it runs: a **Fleet Bundle** on the selected cluster."
+            },
+            "5": {
+              "text": "Each component's configuration can be changed here, or left as the Blueprint ships it."
+            },
+            "6": {
+              "text": "Review, then **Install**."
+            },
+            "7": {
+              "text": "**Install**: SUSE AI Factory with NVIDIA schedules the Blueprint on the cluster, through Fleet."
+            },
+            "8": {
+              "drop": true
+            },
+            "9": {
+              "drop": true
+            },
+            "10": {
+              "text": "**Developer Sandbox** is now a workload of SUSE AI Factory with NVIDIA, its components rolling out."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fleet",
+      "title": "Rolled out by Fleet",
+      "blurb": "SUSE AI Factory with NVIDIA deploys through Fleet, Rancher's GitOps engine: the same Blueprint on one cluster or many.",
+      "segments": [
+        {
+          "name": "fleet",
+          "steps": {
+            "1": {
+              "text": "In **Continuous Delivery**, Fleet holds one bundle per component of **Developer Sandbox**, each active on its cluster."
+            },
+            "2": {
+              "text": "One bundle in detail: the Kubernetes resources it deployed, and their state.",
+              "x": 0.62,
+              "y": 0.42
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "title": "The use case at work",
+      "blurb": "A terminal into the sandbox: the developer codes with Claude Code, and the platform team decides what the sandbox may reach.",
+      "segments": [
+        {
+          "name": "device",
+          "steps": {
+            "1": {
+              "text": "A terminal **inside the sandbox**: Claude Code on the platform's model, git and the platform's Gitea. Everything else on the internet is denied by the sandbox's policy."
+            },
+            "2": {
+              "text": "**Claude Code** starts, on **NVIDIA Nemotron 3.5 Lightning**. The OpenShell log on the right already shows what it tried to reach, and what was refused."
+            },
+            "3": {
+              "text": "Asked for FizzBuzz with tests, it writes **fizzbuzz.py** and **test_fizzbuzz.py**, and runs them: all tests pass. Every model call goes through the gateway, allowed."
+            },
+            "4": {
+              "text": "Asked to fetch www.suse.com, it can't: the sandbox refuses the connection, and the **DENY** lines say why."
+            },
+            "5": {
+              "text": "The same from the shell: `curl` gets no connection."
+            },
+            "6": {
+              "text": "The platform team's side: **Change the policy, live** gives the command to allow one website, run on the device, outside the sandbox."
+            },
+            "7": {
+              "text": "Policy updated: the same `curl`, in the same session, now gets **HTTP 200**. No restart."
+            },
+            "8": {
+              "text": "**Revoke** takes it back, live: the next request is refused again."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "rancher",
+      "title": "Into Rancher",
+      "blurb": "From SUSE AI Factory with NVIDIA into Rancher, to understand the workload: its resources, its namespace, its pods.",
+      "segments": [
+        {
+          "name": "rancher",
+          "steps": {
+            "1": {
+              "text": "Back in SUSE AI Factory with NVIDIA: open the **Developer Sandbox** workload."
+            },
+            "2": {
+              "text": "Its details: the Blueprint and version it comes from, where it runs, and the Fleet resources underneath. From here, straight into Rancher."
+            },
+            "3": {
+              "text": "The use case's namespace in Rancher: every resource, its state. Open **Workloads**."
+            },
+            "4": {
+              "text": "The use case's workloads. Open one."
+            },
+            "5": {
+              "text": "The deployment and its pods, live, with everything Rancher offers to inspect and operate it.",
+              "x": 0.3,
+              "y": 0.45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "title": "SUSE Security",
+      "blurb": "SUSE Security scans every container as it starts, the sandbox's included.",
+      "segments": [
+        {
+          "name": "security",
+          "steps": {
+            "1": {
+              "text": "**SUSE Security** lists every container on the cluster with its vulnerabilities."
+            },
+            "2": {
+              "text": "Filtered on the sandboxes' namespace: the developer sandbox and its supervisor."
+            },
+            "3": {
+              "text": "Open **Vulnerabilities** for one of them."
+            },
+            "4": {
+              "text": "Its CVEs, by severity, with the package and the fixed version: the sandbox is scanned like any other workload."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "SUSE Observability",
+      "blurb": "SUSE Observability shows the Blueprint's workload as it is right now: its health, its events and its flow.",
+      "segments": [
+        {
+          "name": "observability",
+          "steps": {
+            "1": {
+              "text": "**SUSE Observability** lists every Blueprint deployed through SUSE AI Factory with NVIDIA, with its health. Open **Developer Sandbox**."
+            },
+            "2": {
+              "text": "The Blueprint as a component, right now: its health and events, with links to the agent's traces and to **Flow: what it is made of**."
+            },
+            "3": {
+              "text": "The same flow as in the Studio, live: each running component coloured by its health."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "outro": {
+    "title": "Developers move fast, inside the guardrails",
+    "description": "A coding agent on the platform's own model, in NVIDIA OpenShell, deployed as a Blueprint by SUSE AI Factory with NVIDIA through Fleet, scanned by SUSE Security, operated in Rancher and watched by SUSE Observability."
+  },
+  "id": "ZvPfzRwwz_Pu"
+}
