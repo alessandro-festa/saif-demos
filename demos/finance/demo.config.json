@@ -1,0 +1,1629 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/npm/@inkly-org/interactive-demo/dist/schema/demo.config.json",
+  "id": "XR3p15HVydmE",
+  "version": 1,
+  "title": "Fraud detection & investigation",
+  "subtitle": "SUSE AI Factory with NVIDIA · Banking",
+  "background": {
+    "type": "color",
+    "from": "#0C322C",
+    "to": "#192072"
+  },
+  "theme": {
+    "brand": {
+      "logo": "assets/suse-logo-light.png",
+      "name": "SUSE AI Factory with NVIDIA"
+    }
+  },
+  "chrome": {
+    "controls": "full",
+    "autoplay": false,
+    "branding": false
+  },
+  "chapters": [
+    {
+      "id": "flow",
+      "title": "The Blueprint flow",
+      "stepIds": [
+        "flow-cover",
+        "flow-1",
+        "flow-2",
+        "flow-3",
+        "flow-4"
+      ]
+    },
+    {
+      "id": "ai-factory",
+      "title": "SUSE AI Factory with NVIDIA",
+      "stepIds": [
+        "ai-factory-cover",
+        "device-1",
+        "device-2",
+        "device-3",
+        "device-4",
+        "device-5",
+        "device-6",
+        "device-7",
+        "device-8",
+        "device-9",
+        "device-10",
+        "device-11",
+        "device-12",
+        "device-13",
+        "device-14",
+        "device-15",
+        "device-16",
+        "device-17",
+        "device-18",
+        "device-19",
+        "device-20",
+        "device-21"
+      ]
+    },
+    {
+      "id": "rancher",
+      "title": "In the Rancher Prime UI",
+      "stepIds": [
+        "rancher-cover",
+        "rancher-1",
+        "rancher-2"
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "SUSE Observability",
+      "stepIds": [
+        "observability-cover",
+        "observability-1",
+        "observability-2",
+        "observability-3",
+        "observability-4",
+        "observability-5",
+        "observability-7",
+        "observability-8",
+        "observability-9"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "intro",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "intro-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Fraud detection & investigation",
+          "titleColor": "#FFFFFF",
+          "description": "A bank's payments are scored by its own fraud model. An AI agent built with the NeMo Agent Toolkit and NVIDIA Nemotron investigates every alert inside an NVIDIA OpenShell sandbox. It opens cases; only the analyst confirms a case or blocks an account. Customer data never leaves the bank.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Start",
+            "action": {
+              "type": "next"
+            }
+          },
+          "secondaryCta": {
+            "background": "#FFFFFF1F",
+            "textColor": "#FFFFFF",
+            "animation": "none",
+            "label": "All demos",
+            "action": {
+              "type": "url",
+              "href": "../",
+              "target": "_self"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "cover",
+      "id": "flow-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "flow-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "The Blueprint flow",
+          "titleColor": "#FFFFFF",
+          "description": "Fraud Detection & Investigation is a Blueprint in SUSE AI Factory with NVIDIA. The Studio shows what it is made of: the bank's systems, the agent in its NVIDIA OpenShell sandbox, the shared NVIDIA models, and the people who decide.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "flow-1",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=fraud-detection-investigation-0-3-0",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.7,
+        "x": 0.36,
+        "y": 0.52
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "pointer",
+          "x": 0.36,
+          "y": 0.42,
+          "text": "The whole use case on one canvas: payments and core banking on the left, the agent in its **NVIDIA OpenShell sandbox** in the middle, **NVIDIA Nemotron** on the right. Green lines are allowed, red ones refused by the sandbox's policy.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-2",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=fraud-detection-investigation-0-3-0",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.5829,
+        "y": 0.5547
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5829405466715495,
+          "y": 0.5546866692437066,
+          "text": "The **fraud investigation agent**: a NeMo Agent Toolkit agent with XGBoost scoring and SHAP explanations, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-3",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=fraud-detection-investigation-0-3-0",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.7503,
+        "y": 0.5547
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.6872535281711154,
+          "y": 0.5546866692437066,
+          "text": "It reasons with **NVIDIA Nemotron 3.5 Lightning**, a NIM shared by every use case from the *NVIDIA Models (shared)* Blueprint: downloaded once, always up.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-4",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=fraud-detection-investigation-0-3-0",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.5829,
+        "y": 0.644
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5829405466715495,
+          "y": 0.6439813571506077,
+          "text": "Everything else is **outside**: the sandbox refuses any other host, and it can't block an account. Enforced by policy, not promised in a prompt.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "ai-factory-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "ai-factory-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "SUSE AI Factory with NVIDIA",
+          "titleColor": "#FFFFFF",
+          "description": "One click deploys the Blueprint through SUSE AI Factory with NVIDIA, on the customer's own infrastructure. Then the agent goes to work.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "device-1",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.9949,
+        "y": 0.2822
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9147596571180555,
+          "y": 0.32577256944444444,
+          "text": "The use case's page on the platform. **Deploy the use case** deploys the Blueprint through SUSE AI Factory with NVIDIA: its components and the agent's NVIDIA OpenShell sandbox.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-2",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.1247,
+        "y": 0.2737
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2481174045138889,
+          "y": 0.32243923611111114,
+          "text": "Deployed: the Blueprint is **ready** in SUSE AI Factory with NVIDIA and the agent's sandbox is up. The log on the right is OpenShell's: every request the agent makes, allowed or denied.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-3",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.026,
+        "y": 0.5924
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14722222222222223,
+          "y": 0.5924392361111112,
+          "text": "Step by step. First, **score every payment**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-4",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.1911,
+        "y": 0.5105
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.5105208333333333,
+          "text": "The bank's fraud model runs **inside the agent's sandbox**: the sandbox is the bank's data boundary, written as policy. Running now.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-5",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.4125,
+        "y": 0.9878
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4125,
+          "y": 0.8856467013888889,
+          "text": "About 1,500 payments scored in a fraction of a second; the risky ones are above the threshold.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-6",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-006.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.026,
+        "y": 0.6452
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s6_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14722222222222223,
+          "y": 0.6452170138888889,
+          "text": "Next: why was a payment flagged, and why wasn't another?",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-7",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-007.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.1911,
+        "y": 0.4168
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s7_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.41684027777777777,
+          "text": "A score alone doesn't help the analyst. **SHAP** explains each alert: running now.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-8",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-008.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.4125,
+        "y": 0.9599
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s8_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4124972873263889,
+          "y": 0.8300607638888889,
+          "text": "A new device, tiny test charges, money passed on within the hour: the reasons behind each alert.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-9",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-009.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.1911,
+        "y": 0.871
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s9_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.7490538194444445,
+          "text": "And the traveller in Lisbon?",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-10",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-010.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.4125,
+        "y": 0.9917
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s10_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4124945746527778,
+          "y": 0.8993663194444445,
+          "text": "Not flagged: there is a travel notice on file. Fewer false alarms for the analyst.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-11",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-011.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.026,
+        "y": 0.8851
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s11_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14722222222222223,
+          "y": 0.7585503472222223,
+          "text": "Now the agent works the alerts on its own.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-12",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-012.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.1911,
+        "y": 0.5932
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s12_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.5931770833333333,
+          "text": "A **NeMo Agent Toolkit** agent on **NVIDIA Nemotron 3.5 Lightning** plans and calls the tools: it reads each case, screens payees against the sanctions list, and opens one case per pattern.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-13",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-013.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.4125,
+        "y": 0.8403
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s13_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4125,
+          "y": 0.7305208333333333,
+          "text": "The cases it opened, each waiting for the analyst's review. Every tool call shows up in the OpenShell log, allowed.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-14",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-014.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.026,
+        "y": 0.9485
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s14_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14722222222222223,
+          "y": 0.8152170138888889,
+          "text": "Can the agent block the account itself?",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-15",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-015.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.1911,
+        "y": 0.7199
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s15_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.6750434027777777,
+          "text": "Let it try: the agent asks core banking to block the account.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-16",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-016.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.4125,
+        "y": 0.9718
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s16_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4125,
+          "y": 0.8488107638888889,
+          "text": "**403, policy denied.** NVIDIA OpenShell refuses the request before the bank ever sees it: enforced by policy, not promised in a prompt.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-17",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-017.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.026,
+        "y": 0.9963
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s17_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14722222222222223,
+          "y": 0.9229947916666666,
+          "text": "The report, and the data boundary.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-18",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-018.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.1911,
+        "y": 0.4204
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s18_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.42039930555555555,
+          "text": "The agent files the **daily fraud report** in core banking.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-19",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-019.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.4125,
+        "y": 0.5453
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s19_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4125,
+          "y": 0.5452560763888888,
+          "text": "The report: the cases, the money at risk, and the decisions left to the analyst.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-20",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-020.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.1911,
+        "y": 0.7536
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s20_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.6886631944444445,
+          "text": "Last: can the agent reach the internet?",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-21",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-021.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/finance",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.4125,
+        "y": 0.9836
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s21_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4125,
+          "y": 0.8738758680555555,
+          "text": "**Blocked**, every time, and logged in red. The bank's data stays on the customer's own infrastructure.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "rancher-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "rancher-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "In the Rancher Prime UI",
+          "titleColor": "#FFFFFF",
+          "description": "It is a Blueprint in SUSE AI Factory with NVIDIA. The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API: administrators see and manage every deployed Blueprint from here.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "rancher-1",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Overview",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/overview",
+        "title": "Rancher Prime - SUSE AI Factory - Overview",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.0197,
+        "y": 0.0555
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.13402777777777777,
+          "y": 0.18944444444444444,
+          "text": "The **SUSE AI Factory with NVIDIA** overview in the Rancher Prime UI: workloads, their health and the active Blueprints. Open **Workloads**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-2",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Workloads",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/workloads",
+        "title": "Rancher Prime - SUSE AI Factory - Workloads",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.3742,
+        "y": 0.3075
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.37418348524305556,
+          "y": 0.3351996527777778,
+          "text": "Every Blueprint deployed through SUSE AI Factory with NVIDIA, with its namespace, version and lifecycle actions. Here, **Fraud Detection & Investigation**: its source Blueprint, its version and where it runs.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "observability-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "observability-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "SUSE Observability",
+          "titleColor": "#FFFFFF",
+          "description": "SUSE Observability sees the Blueprint, its flow, the agent's every step and the models: health, traces with prompts and tokens, and what OpenShell allowed and refused.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "observability-1",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Blueprints - Views | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/views/urn:stackpack:aif-demos:component-presentation:blueprint",
+        "title": "Blueprints - Views | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.25,
+        "y": 0.0805
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3128716362847222,
+          "y": 0.21444444444444444,
+          "text": "Every Blueprint deployed through SUSE AI Factory with NVIDIA, with its health. Open **Fraud Detection & Investigation**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-2",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Components | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/components/urn:aif:blueprint:fraud-detection-investigation",
+        "title": "Components | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.0054,
+        "y": 0.615
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.08726671006944445,
+          "y": 0.615,
+          "text": "The Blueprint as a component: its health and events, with links to the agent's traces and to **Flow: what it is made of**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-3",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Blueprint: Fraud Detection & Investigation - Views | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/views/urn:custom:query-view:aif-blueprint-fraud-detection-investigation/topology",
+        "title": "Blueprint: Fraud Detection & Investigation - Views | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.4858,
+        "y": 0.4772
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.48576117621527776,
+          "y": 0.4772222222222222,
+          "text": "The same flow as in the Studio, live: the agent, core banking and NVIDIA Nemotron, each coloured by its health.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-4",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Components | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/components/urn:opentelemetry:namespace%2Fns-agents:service%2Ffraud-agent/traces",
+        "title": "Components | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.1242,
+        "y": 0.6122
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.24778917100694445,
+          "y": 0.6122222222222222,
+          "text": "The agent's traces. The last one is named after the analyst's request, *Work today's fraud alerts*; the red ones are the requests OpenShell refused.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-5",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Components | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/components/urn:opentelemetry:namespace%2Fns-agents:service%2Ffraud-agent/traces?timeRange=1793351175051_1793354775051&timestamp=1793354775051",
+        "title": "Components | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.0006,
+        "y": 1
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.04168294270833333,
+          "y": 1,
+          "text": "Inside the trace: every model call and tool call, in order, with its timing.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-7",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-007.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Components | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/components/urn:opentelemetry:namespace%2Fns-agents:service%2Ffraud-agent/traces?rightPane=hidden-0__active_tab-selection__chain-span%3Af9d0f5f852986ecb455a6bce9dc366d2%3A178987c3a6acffba%3Ae8e5c11f6537ed4b&timeRange=1793351175051_1793354775051&timestamp=1793354775051",
+        "title": "Components | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.9201,
+        "y": 0.4183
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s7_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.7861111111111111,
+          "y": 0.41833333333333333,
+          "text": "One model call in detail: the prompt, the answer, the model and the tokens used. An audit trail of what the agent did with the bank's data.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-8",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-008.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "LLM Models - Views | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/views/urn:stackpack:suse-ai:shared:query-view:genai-model",
+        "title": "LLM Models - Views | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.4858,
+        "y": 0.013
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s8_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.48576117621527776,
+          "y": 0.11666666666666667,
+          "text": "The NVIDIA models serving the platform, and their health.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-9",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-009.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "AI Factory demos: live - Dashboards | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/dashboards/urn:stackpack:aif-demos:shared:dashboard:live",
+        "title": "AI Factory demos: live - Dashboards | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "transform": {
+        "zoom": 1.35,
+        "x": 0.0041,
+        "y": 0.0409
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s9_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.07926432291666667,
+          "y": 0.1711111111111111,
+          "text": "The live dashboard: agent requests **allowed** and **denied** by NVIDIA OpenShell, tokens, time to first token, GPU.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "outro",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "outro-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Decisions stay with the analyst",
+          "titleColor": "#FFFFFF",
+          "description": "A fraud model and NVIDIA Nemotron in NVIDIA OpenShell, deployed as a Blueprint through SUSE AI Factory with NVIDIA on the customer's own infrastructure, managed in the Rancher Prime UI and watched by SUSE Observability.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Back to all demos",
+            "action": {
+              "type": "url",
+              "href": "../",
+              "target": "_self"
+            }
+          },
+          "secondaryCta": {
+            "background": "#FFFFFF1F",
+            "textColor": "#FFFFFF",
+            "animation": "none",
+            "label": "Replay",
+            "action": {
+              "type": "restart"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    }
+  ]
+}

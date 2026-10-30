@@ -116,6 +116,7 @@ for (const chapter of story.chapters) {
 
       const message = (s.annotations ?? []).find((a) => a.type === 'message');
       if (message) {
+        message.showMessage = true;
         if (edit.text) message.text = edit.text;
         if (edit.x !== undefined) message.x = edit.x;
         if (edit.y !== undefined) message.y = edit.y;
