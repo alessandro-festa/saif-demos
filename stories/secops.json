@@ -1,0 +1,291 @@
+{
+  "title": "Sovereign agentic SecOps",
+  "subtitle": "SUSE AI Factory with NVIDIA · Security",
+  "intro": "SUSE Security finds vulnerable images in a bank's payments platform. An AI agent built with the NeMo Agent Toolkit and NVIDIA Nemotron checks the policy and the approved image catalog, and opens one pull request moving them to SUSE images. A person merges, Fleet deploys, SUSE Security rescans.",
+  "chapters": [
+    {
+      "id": "flow",
+      "title": "The architecture",
+      "blurb": "Sovereign Agentic SecOps is a Blueprint in SUSE AI Factory with NVIDIA. The Studio shows what it is made of.",
+      "segments": [
+        {
+          "name": "flow",
+          "steps": {
+            "1": {
+              "text": "The architecture of **Sovereign Agentic SecOps**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy."
+            },
+            "2": {
+              "text": "The **agent**: a NeMo Agent Toolkit agent, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it."
+            },
+            "3": {
+              "text": "It reasons with an **NVIDIA NIM** shared by every use case from the *NVIDIA Models (shared)* Blueprint: downloaded once, always up."
+            },
+            "4": {
+              "text": "Everything else is **outside**: the sandbox refuses it. Enforced by policy, not promised in a prompt."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "saif",
+      "title": "Deploy with SUSE AI Factory with NVIDIA",
+      "blurb": "It is a Blueprint in SUSE AI Factory with NVIDIA. The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API. Here it deploys the Blueprint.",
+      "segments": [
+        {
+          "name": "saif",
+          "steps": {
+            "1": {
+              "text": "The Blueprints of **SUSE AI Factory with NVIDIA**, SUSE's and its partners'. Open **Sovereign Agentic SecOps**."
+            },
+            "2": {
+              "text": "What the Blueprint brings: its versions, its description and its applications. **Install** it."
+            },
+            "3": {
+              "text": "The install wizard: the instance's name and its default namespace."
+            },
+            "4": {
+              "text": "Where it runs: a **Fleet Bundle** on the selected cluster."
+            },
+            "5": {
+              "text": "Each component's configuration can be changed here, or left as the Blueprint ships it."
+            },
+            "6": {
+              "text": "Review, then **Install**."
+            },
+            "7": {
+              "text": "**Install**: SUSE AI Factory with NVIDIA schedules the Blueprint on the cluster, through Fleet."
+            },
+            "8": {
+              "drop": true
+            },
+            "9": {
+              "drop": true
+            },
+            "10": {
+              "text": "**Sovereign Agentic SecOps** is now a workload of SUSE AI Factory with NVIDIA, its components rolling out."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fleet",
+      "title": "Rolled out by Fleet",
+      "blurb": "SUSE AI Factory with NVIDIA deploys through Fleet, Rancher's GitOps engine: the same Blueprint on one cluster or many.",
+      "segments": [
+        {
+          "name": "fleet",
+          "steps": {
+            "1": {
+              "text": "In **Continuous Delivery**, Fleet holds one bundle per component of **Sovereign Agentic SecOps**, each active on its cluster."
+            },
+            "2": {
+              "text": "One bundle in detail: the Kubernetes resources it deployed, and their state.",
+              "x": 0.62,
+              "y": 0.42
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "title": "The use case at work",
+      "blurb": "The use case's own page, step by step: what the agent does, and what it is not allowed to do.",
+      "segments": [
+        {
+          "name": "device",
+          "steps": {
+            "1": {
+              "text": "The use case's own page: the Blueprint is **ready** in SUSE AI Factory with NVIDIA and the agent's sandbox is up. The OpenShell log on the right shows every request the agent makes."
+            },
+            "2": {
+              "text": "First: **what SUSE Security sees**."
+            },
+            "3": {
+              "text": "The agent's sandbox reads SUSE Security's findings through its API, with a key it never sees."
+            },
+            "4": {
+              "text": "The payments platform's images and their vulnerabilities: the storefront and the payments API carry critical and high CVEs."
+            },
+            "5": {
+              "text": "Next: **triage**."
+            },
+            "6": {
+              "text": "NVIDIA Nemotron Embed finds the policy sections that matter; Nemotron 3.5 Lightning turns them into a triage table."
+            },
+            "7": {
+              "text": "Internet-facing and cardholder-data workloads first, each with its deadline under the bank's policy."
+            },
+            "8": {
+              "text": "Now **the agent fixes it**."
+            },
+            "9": {
+              "text": "The agent checks the approved image catalog, files a Gitea issue per workload, and opens **one pull request** moving them to SUSE images."
+            },
+            "10": {
+              "text": "Its issues and its pull request, waiting for a person."
+            },
+            "11": {
+              "text": "Can the agent merge its own fix, or switch off scanning?"
+            },
+            "12": {
+              "text": "Let it try."
+            },
+            "13": {
+              "text": "**403, policy denied**, for the merge and for SUSE Security's settings: enforced by policy, not promised in a prompt."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "security-before",
+      "title": "SUSE Security, before",
+      "blurb": "What SUSE Security reports on the payments platform before the fix.",
+      "segments": [
+        {
+          "name": "security-before",
+          "steps": {
+            "1": {
+              "text": "**SUSE Security** lists every container on the cluster with its vulnerabilities."
+            },
+            "2": {
+              "text": "Filtered on the payments platform's namespace."
+            },
+            "3": {
+              "text": "Open **Vulnerabilities** for the storefront's container."
+            },
+            "4": {
+              "text": "Critical and high CVEs, by package and fixed version: what the agent was asked to fix."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "merge",
+      "title": "A person merges",
+      "blurb": "The platform engineer reviews the agent's pull request in Gitea and merges it; Fleet rolls it out and SUSE Security rescans.",
+      "segments": [
+        {
+          "name": "gitea",
+          "steps": {
+            "1": {
+              "text": "In Gitea, the agent's issues: one per vulnerable workload."
+            },
+            "2": {
+              "text": "Its pull request. Open it."
+            },
+            "3": {
+              "text": "The change: two images moved from Docker Hub to **registry.suse.com**, nothing else."
+            },
+            "4": {
+              "text": "The engineer merges: **Create merge commit**."
+            }
+          }
+        },
+        {
+          "name": "after",
+          "steps": {
+            "1": {
+              "text": "Back on the use case's page, the step that waited for the merge."
+            },
+            "2": {
+              "text": "Merged by a person, rolled out by **Fleet**, rescanned by **SUSE Security**: the storefront and the payments API go from critical findings to none."
+            },
+            "3": {
+              "text": "The change record, and the boundary."
+            },
+            "4": {
+              "text": "The agent writes the change record for the audit."
+            },
+            "5": {
+              "text": "And it can't reach the internet: **blocked**, every time, and logged."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "rancher",
+      "title": "Into Rancher",
+      "blurb": "From SUSE AI Factory with NVIDIA into Rancher, to understand the workload: its resources, its namespace, its pods.",
+      "segments": [
+        {
+          "name": "rancher",
+          "steps": {
+            "1": {
+              "text": "Back in SUSE AI Factory with NVIDIA: open the **Sovereign Agentic SecOps** workload."
+            },
+            "2": {
+              "text": "Its details: the Blueprint and version it comes from, where it runs, and the Fleet resources underneath. From here, straight into Rancher."
+            },
+            "3": {
+              "text": "The use case's namespace in Rancher: every resource, its state. Open **Workloads**."
+            },
+            "4": {
+              "text": "The use case's workloads. Open one."
+            },
+            "5": {
+              "text": "The deployment and its pods, live, with everything Rancher offers to inspect and operate it.",
+              "x": 0.3,
+              "y": 0.45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "security-after",
+      "title": "SUSE Security, after",
+      "blurb": "SUSE Security rescans the new images as they start.",
+      "segments": [
+        {
+          "name": "security-after",
+          "steps": {
+            "1": {
+              "text": "**SUSE Security** again, after the merge."
+            },
+            "2": {
+              "text": "Filtered on the payments platform."
+            },
+            "3": {
+              "text": "Open **Vulnerabilities** for the storefront again."
+            },
+            "4": {
+              "text": "The storefront rescanned on its SUSE image: no critical or high CVEs left."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "SUSE Observability",
+      "blurb": "SUSE Observability shows the Blueprint's workload as it is right now: its health, its events and its flow.",
+      "segments": [
+        {
+          "name": "observability",
+          "steps": {
+            "1": {
+              "text": "**SUSE Observability** lists every Blueprint deployed through SUSE AI Factory with NVIDIA, with its health. Open **Sovereign Agentic SecOps**."
+            },
+            "2": {
+              "text": "The Blueprint as a component, right now: its health and events, with links to the agent's traces and to **Flow: what it is made of**."
+            },
+            "3": {
+              "text": "The same flow as in the Studio, live: each running component coloured by its health."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "outro": {
+    "title": "An agent does the work, a person decides",
+    "description": "SUSE Security, Fleet and Rancher Prime with NVIDIA Nemotron in NVIDIA OpenShell, deployed as a Blueprint by SUSE AI Factory with NVIDIA on the customer's own infrastructure, and watched by SUSE Observability."
+  },
+  "id": "u86C9OICOu81"
+}

@@ -100,6 +100,8 @@ def record_saif(demo):
         time.sleep(4)
         shot(b, "document.querySelector('h1')")                         # the wizard: name and namespace
         for _ in range(3):                                              # basic information, cluster, configuration
+            b.wait("!/Loading\\.\\.\\./.test(document.body.innerText)", timeout=90)
+            time.sleep(2)
             b.click_text("Next", selector="button")
             time.sleep(4)
         review = b.js("document.body.innerText") or ""
@@ -275,9 +277,9 @@ def story(demo, parts, device, finish, security=()):
         elif part == "finish":
             finish()
         else:
-            for name, namespace in security:
+            for name, namespace, *row in security:
                 if part == name:
-                    record_security(demo, name, namespace)
+                    record_security(demo, name, namespace, *row)
 
 
 SECOPS_STEPS = [("What SUSE Security sees", ["Read the findings"]), ("Triage", ["Triage the findings"]),
@@ -289,7 +291,7 @@ MERGE_WAIT = "Wait for the merge, the rollout and the rescan"
 def secops_device():
     demo = "secops"
     record_device_guided(demo, SECOPS_STEPS)
-    record_security(demo, "security-before", "ns-payments")
+    record_security(demo, "security-before", "ns-payments", "web")  # the storefront: 43 critical
     # The device waits for a person to merge the agent's pull request: started in a tab of its own, while the
     # engineer's side in Gitea is recorded.
     w = Tab()
@@ -541,7 +543,7 @@ def run(slug, parts):
     if slug == "developer-overview":
         record_overview(parts)
     elif slug == "secops":
-        story(slug, parts, secops_device, lambda: finish_guided(slug), security=[("security-after", "ns-payments")])
+        story(slug, parts, secops_device, lambda: finish_guided(slug), security=[("security-after", "ns-payments", "web")])
     elif slug == "traffic":
         story(slug, parts, traffic_device, finish_page("/demo/traffic"))
     elif slug == "sovereign":

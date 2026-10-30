@@ -1,0 +1,2235 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/npm/@inkly-org/interactive-demo/dist/schema/demo.config.json",
+  "id": "u86C9OICOu81",
+  "version": 1,
+  "title": "Sovereign agentic SecOps",
+  "subtitle": "SUSE AI Factory with NVIDIA · Security",
+  "background": {
+    "type": "color",
+    "from": "#0C322C",
+    "to": "#192072"
+  },
+  "theme": {
+    "brand": {
+      "logo": "assets/suse-logo-light.png",
+      "name": "SUSE AI Factory with NVIDIA"
+    }
+  },
+  "chrome": {
+    "controls": "full",
+    "autoplay": false,
+    "branding": false
+  },
+  "chapters": [
+    {
+      "id": "flow",
+      "title": "The architecture",
+      "stepIds": [
+        "flow-cover",
+        "flow-1",
+        "flow-2",
+        "flow-3",
+        "flow-4"
+      ]
+    },
+    {
+      "id": "saif",
+      "title": "Deploy with SUSE AI Factory with NVIDIA",
+      "stepIds": [
+        "saif-cover",
+        "saif-1",
+        "saif-2",
+        "saif-3",
+        "saif-4",
+        "saif-5",
+        "saif-6",
+        "saif-7",
+        "saif-10"
+      ]
+    },
+    {
+      "id": "fleet",
+      "title": "Rolled out by Fleet",
+      "stepIds": [
+        "fleet-cover",
+        "fleet-1",
+        "fleet-2"
+      ]
+    },
+    {
+      "id": "demo",
+      "title": "The use case at work",
+      "stepIds": [
+        "demo-cover",
+        "device-1",
+        "device-2",
+        "device-3",
+        "device-4",
+        "device-5",
+        "device-6",
+        "device-7",
+        "device-8",
+        "device-9",
+        "device-10",
+        "device-11",
+        "device-12",
+        "device-13"
+      ]
+    },
+    {
+      "id": "security-before",
+      "title": "SUSE Security, before",
+      "stepIds": [
+        "security-before-cover",
+        "security-before-1",
+        "security-before-2",
+        "security-before-3",
+        "security-before-4"
+      ]
+    },
+    {
+      "id": "merge",
+      "title": "A person merges",
+      "stepIds": [
+        "merge-cover",
+        "gitea-1",
+        "gitea-2",
+        "gitea-3",
+        "gitea-4",
+        "after-1",
+        "after-2",
+        "after-3",
+        "after-4",
+        "after-5"
+      ]
+    },
+    {
+      "id": "rancher",
+      "title": "Into Rancher",
+      "stepIds": [
+        "rancher-cover",
+        "rancher-1",
+        "rancher-2",
+        "rancher-3",
+        "rancher-4",
+        "rancher-5"
+      ]
+    },
+    {
+      "id": "security-after",
+      "title": "SUSE Security, after",
+      "stepIds": [
+        "security-after-cover",
+        "security-after-1",
+        "security-after-2",
+        "security-after-3",
+        "security-after-4"
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "SUSE Observability",
+      "stepIds": [
+        "observability-cover",
+        "observability-1",
+        "observability-2",
+        "observability-3"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "intro",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "intro-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Sovereign agentic SecOps",
+          "titleColor": "#FFFFFF",
+          "description": "SUSE Security finds vulnerable images in a bank's payments platform. An AI agent built with the NeMo Agent Toolkit and NVIDIA Nemotron checks the policy and the approved image catalog, and opens one pull request moving them to SUSE images. A person merges, Fleet deploys, SUSE Security rescans.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Start",
+            "action": {
+              "type": "next"
+            }
+          },
+          "secondaryCta": {
+            "background": "#FFFFFF1F",
+            "textColor": "#FFFFFF",
+            "animation": "none",
+            "label": "All demos",
+            "action": {
+              "type": "url",
+              "href": "../",
+              "target": "_self"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "cover",
+      "id": "flow-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "flow-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "The architecture",
+          "titleColor": "#FFFFFF",
+          "description": "Sovereign Agentic SecOps is a Blueprint in SUSE AI Factory with NVIDIA. The Studio shows what it is made of.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "flow-1",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=sovereign-agentic-secops-0-3-0",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.49166666666666664,
+          "y": 0.5294401041666666,
+          "text": "The architecture of **Sovereign Agentic SecOps**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-2",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=sovereign-agentic-secops-0-3-0",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5829405466715495,
+          "y": 0.5535550435384115,
+          "text": "The **agent**: a NeMo Agent Toolkit agent, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-3",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=sovereign-agentic-secops-0-3-0",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.6872535281711154,
+          "y": 0.5088494873046875,
+          "text": "It reasons with an **NVIDIA NIM** shared by every use case from the *NVIDIA Models (shared)* Blueprint: downloaded once, always up.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-4",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=sovereign-agentic-secops-0-3-0",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5829405466715495,
+          "y": 0.6519072808159723,
+          "text": "Everything else is **outside**: the sandbox refuses it. Enforced by policy, not promised in a prompt.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "saif-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "saif-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Deploy with SUSE AI Factory with NVIDIA",
+          "titleColor": "#FFFFFF",
+          "description": "It is a Blueprint in SUSE AI Factory with NVIDIA. The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API. Here it deploys the Blueprint.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "saif-1",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints",
+        "title": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.36944444444444446,
+          "y": 0.5303993055555556,
+          "text": "The Blueprints of **SUSE AI Factory with NVIDIA**, SUSE's and its partners'. Open **Sovereign Agentic SecOps**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-2",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints",
+        "title": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2900417751736111,
+          "y": 0.6055555555555555,
+          "text": "What the Blueprint brings: its versions, its description and its applications. **Install** it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-3",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=sovereign-agentic-secops&version=0.3.0",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.6111111111111112,
+          "y": 0.5305555555555556,
+          "text": "The install wizard: the instance's name and its default namespace.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-4",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=sovereign-agentic-secops&version=0.3.0",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9444634331597223,
+          "y": 0.8877777777777778,
+          "text": "Where it runs: a **Fleet Bundle** on the selected cluster.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-5",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=sovereign-agentic-secops&version=0.3.0",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9444634331597223,
+          "y": 0.8877777777777778,
+          "text": "Each component's configuration can be changed here, or left as the Blueprint ships it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-6",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-006.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=sovereign-agentic-secops&version=0.3.0",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s6_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9444634331597223,
+          "y": 0.8877777777777778,
+          "text": "Review, then **Install**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-7",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-007.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=sovereign-agentic-secops&version=0.3.0",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s7_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9421712239583333,
+          "y": 0.8877777777777778,
+          "text": "**Install**: SUSE AI Factory with NVIDIA schedules the Blueprint on the cluster, through Fleet.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-10",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-010.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Workloads",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/workloads",
+        "title": "Rancher Prime - SUSE AI Factory - Workloads",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s10_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.6903754340277778,
+          "y": 0.5434418402777778,
+          "text": "**Sovereign Agentic SecOps** is now a workload of SUSE AI Factory with NVIDIA, its components rolling out.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "fleet-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "fleet-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Rolled out by Fleet",
+          "titleColor": "#FFFFFF",
+          "description": "SUSE AI Factory with NVIDIA deploys through Fleet, Rancher's GitOps engine: the same Blueprint on one cluster or many.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "fleet-1",
+      "background": {
+        "type": "image",
+        "src": "assets/fleet-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - Continuous Delivery - Bundles",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/_/fleet/fleet.cattle.io.bundle?q=sovereign-agentic-secops",
+        "title": "Rancher Prime - Continuous Delivery - Bundles",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.44365505642361114,
+          "y": 0.2921701388888889,
+          "text": "In **Continuous Delivery**, Fleet holds one bundle per component of **Sovereign Agentic SecOps**, each active on its cluster.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "fleet-2",
+      "background": {
+        "type": "image",
+        "src": "assets/fleet-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - Continuous Delivery - Bundle",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/_/fleet/fleet.cattle.io.bundle/fleet-default/sovereign-agentic-secops-c-5nhkr-openshell-agent#resources",
+        "title": "Rancher Prime - Continuous Delivery - Bundle",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.62,
+          "y": 0.42,
+          "text": "One bundle in detail: the Kubernetes resources it deployed, and their state.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "demo-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "demo-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "The use case at work",
+          "titleColor": "#FFFFFF",
+          "description": "The use case's own page, step by step: what the agent does, and what it is not allowed to do.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "device-1",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.23300238715277777,
+          "y": 0.34577256944444446,
+          "text": "The use case's own page: the Blueprint is **ready** in SUSE AI Factory with NVIDIA and the agent's sandbox is up. The OpenShell log on the right shows every request the agent makes.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-2",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14722222222222223,
+          "y": 0.6196614583333333,
+          "text": "First: **what SUSE Security sees**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-3",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.5105208333333333,
+          "text": "The agent's sandbox reads SUSE Security's findings through its API, with a key it never sees.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-4",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4124972873263889,
+          "y": 0.9320659722222222,
+          "text": "The payments platform's images and their vulnerabilities: the storefront and the payments API carry critical and high CVEs.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-5",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14722222222222223,
+          "y": 0.6724392361111111,
+          "text": "Next: **triage**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-6",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-006.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s6_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.2835243055555556,
+          "text": "NVIDIA Nemotron Embed finds the policy sections that matter; Nemotron 3.5 Lightning turns them into a triage table.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-7",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-007.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s7_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4125,
+          "y": 0.8239105902777778,
+          "text": "Internet-facing and cardholder-data workloads first, each with its deadline under the bank's policy.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-8",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-008.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s8_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14722222222222223,
+          "y": 0.721328125,
+          "text": "Now **the agent fixes it**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-9",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-009.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s9_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.6758333333333333,
+          "text": "The agent checks the approved image catalog, files a Gitea issue per workload, and opens **one pull request** moving them to SUSE images.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-10",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-010.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s10_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4125,
+          "y": 0.9707118055555556,
+          "text": "Its issues and its pull request, waiting for a person.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-11",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-011.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s11_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14722222222222223,
+          "y": 0.7741059027777778,
+          "text": "Can the agent merge its own fix, or switch off scanning?",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-12",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-012.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s12_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.3795138888888889,
+          "text": "Let it try.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-13",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-013.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s13_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4125,
+          "y": 0.9476171875,
+          "text": "**403, policy denied**, for the merge and for SUSE Security's settings: enforced by policy, not promised in a prompt.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "security-before-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "security-before-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "SUSE Security, before",
+          "titleColor": "#FFFFFF",
+          "description": "What SUSE Security reports on the payments platform before the fix.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "security-before-1",
+      "background": {
+        "type": "image",
+        "src": "assets/security-before-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9234375,
+          "y": 0.20944444444444443,
+          "text": "**SUSE Security** lists every container on the cluster with its vulnerabilities.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "security-before-2",
+      "background": {
+        "type": "image",
+        "src": "assets/security-before-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.24444444444444444,
+          "y": 0.46555555555555556,
+          "text": "Filtered on the payments platform's namespace.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "security-before-3",
+      "background": {
+        "type": "image",
+        "src": "assets/security-before-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.46012098524305556,
+          "y": 0.6177777777777778,
+          "text": "Open **Vulnerabilities** for the storefront's container.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "security-before-4",
+      "background": {
+        "type": "image",
+        "src": "assets/security-before-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5815972222222222,
+          "y": 0.8008333333333333,
+          "text": "Critical and high CVEs, by package and fixed version: what the agent was asked to fix.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "merge-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "merge-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "A person merges",
+          "titleColor": "#FFFFFF",
+          "description": "The platform engineer reviews the agent's pull request in Gitea and merges it; Fleet rolls it out and SUSE Security rescans.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "gitea-1",
+      "background": {
+        "type": "image",
+        "src": "assets/gitea-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Issues - secops-estate - Gitea: Git with a cup of tea",
+        "sourceUrl": "http://127.0.0.1:3000/aif/secops-estate/issues",
+        "title": "Issues - secops-estate - Gitea: Git with a cup of tea",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5,
+          "y": 0.2358420138888889,
+          "text": "In Gitea, the agent's issues: one per vulnerable workload.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "gitea-2",
+      "background": {
+        "type": "image",
+        "src": "assets/gitea-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Pull Requests - secops-estate - Gitea: Git with a cup of tea",
+        "sourceUrl": "http://127.0.0.1:3000/aif/secops-estate/pulls",
+        "title": "Pull Requests - secops-estate - Gitea: Git with a cup of tea",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.23469780815972222,
+          "y": 0.29279513888888886,
+          "text": "Its pull request. Open it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "gitea-3",
+      "background": {
+        "type": "image",
+        "src": "assets/gitea-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "#12 - Remediate SUSE Security findings in payments estate - secops-estate - Gitea: Git with a cup of tea",
+        "sourceUrl": "http://127.0.0.1:3000/aif/secops-estate/pulls/12/files",
+        "title": "#12 - Remediate SUSE Security findings in payments estate - secops-estate - Gitea: Git with a cup of tea",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5,
+          "y": 0.5162152777777778,
+          "text": "The change: two images moved from Docker Hub to **registry.suse.com**, nothing else.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "gitea-4",
+      "background": {
+        "type": "image",
+        "src": "assets/gitea-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "#12 - Remediate SUSE Security findings in payments estate - secops-estate - Gitea: Git with a cup of tea",
+        "sourceUrl": "http://127.0.0.1:3000/aif/secops-estate/pulls/12",
+        "title": "#12 - Remediate SUSE Security findings in payments estate - secops-estate - Gitea: Git with a cup of tea",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.1756103515625,
+          "y": 0.5097222222222222,
+          "text": "The engineer merges: **Create merge commit**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "after-1",
+      "background": {
+        "type": "image",
+        "src": "assets/after-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14722222222222223,
+          "y": 0.901328125,
+          "text": "Back on the use case's page, the step that waited for the merge.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "after-2",
+      "background": {
+        "type": "image",
+        "src": "assets/after-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4125,
+          "y": 0.7014279513888889,
+          "text": "Merged by a person, rolled out by **Fleet**, rescanned by **SUSE Security**: the storefront and the payments API go from critical findings to none.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "after-3",
+      "background": {
+        "type": "image",
+        "src": "assets/after-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14722222222222223,
+          "y": 0.9541059027777777,
+          "text": "The change record, and the boundary.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "after-4",
+      "background": {
+        "type": "image",
+        "src": "assets/after-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2860568576388889,
+          "y": 0.6541493055555555,
+          "text": "The agent writes the change record for the audit.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "after-5",
+      "background": {
+        "type": "image",
+        "src": "assets/after-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/secops",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4125,
+          "y": 0.8730772569444445,
+          "text": "And it can't reach the internet: **blocked**, every time, and logged.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "rancher-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "rancher-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Into Rancher",
+          "titleColor": "#FFFFFF",
+          "description": "From SUSE AI Factory with NVIDIA into Rancher, to understand the workload: its resources, its namespace, its pods.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "rancher-1",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Workloads",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/workloads",
+        "title": "Rancher Prime - SUSE AI Factory - Workloads",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.36715494791666664,
+          "y": 0.6966579861111111,
+          "text": "Back in SUSE AI Factory with NVIDIA: open the **Sovereign Agentic SecOps** workload.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-2",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Workloads",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/workloads",
+        "title": "Rancher Prime - SUSE AI Factory - Workloads",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.7047932942708334,
+          "y": 0.7969140625,
+          "text": "Its details: the Blueprint and version it comes from, where it runs, and the Fleet resources underneath. From here, straight into Rancher.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-3",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - spark-8528 - Namespace",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/c-5nhkr/explorer/namespace/ns-secops#Resources",
+        "title": "Rancher Prime - spark-8528 - Namespace",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3702853732638889,
+          "y": 0.4153732638888889,
+          "text": "The use case's namespace in Rancher: every resource, its state. Open **Workloads**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-4",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - spark-8528 - Namespace",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/c-5nhkr/explorer/namespace/ns-secops#Workloads",
+        "title": "Rancher Prime - spark-8528 - Namespace",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.36050347222222223,
+          "y": 0.589921875,
+          "text": "The use case's workloads. Open one.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-5",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - spark-8528 - Deployment",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/c-5nhkr/explorer/apps.deployment/ns-secops/integration-gateway#pods",
+        "title": "Rancher Prime - spark-8528 - Deployment",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3,
+          "y": 0.45,
+          "text": "The deployment and its pods, live, with everything Rancher offers to inspect and operate it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "security-after-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "security-after-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "SUSE Security, after",
+          "titleColor": "#FFFFFF",
+          "description": "SUSE Security rescans the new images as they start.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "security-after-1",
+      "background": {
+        "type": "image",
+        "src": "assets/security-after-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9234375,
+          "y": 0.20944444444444443,
+          "text": "**SUSE Security** again, after the merge.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "security-after-2",
+      "background": {
+        "type": "image",
+        "src": "assets/security-after-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.24444444444444444,
+          "y": 0.3322222222222222,
+          "text": "Filtered on the payments platform.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "security-after-3",
+      "background": {
+        "type": "image",
+        "src": "assets/security-after-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.46012098524305556,
+          "y": 0.6177777777777778,
+          "text": "Open **Vulnerabilities** for the storefront again.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "security-after-4",
+      "background": {
+        "type": "image",
+        "src": "assets/security-after-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "NeuVector",
+        "sourceUrl": "https://127.0.0.1:30843/index.html?v=f3d21e6b80#/workloads",
+        "title": "NeuVector",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5815972222222222,
+          "y": 0.8008333333333333,
+          "text": "The storefront rescanned on its SUSE image: no critical or high CVEs left.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "observability-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "observability-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "SUSE Observability",
+          "titleColor": "#FFFFFF",
+          "description": "SUSE Observability shows the Blueprint's workload as it is right now: its health, its events and its flow.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "observability-1",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Blueprints - Views | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/views/urn:stackpack:aif-demos:component-presentation:blueprint",
+        "title": "Blueprints - Views | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3031222873263889,
+          "y": 0.39666666666666667,
+          "text": "**SUSE Observability** lists every Blueprint deployed through SUSE AI Factory with NVIDIA, with its health. Open **Sovereign Agentic SecOps**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-2",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Components | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/components/urn:aif:blueprint:sovereign-agentic-secops",
+        "title": "Components | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.08726671006944445,
+          "y": 0.615,
+          "text": "The Blueprint as a component, right now: its health and events, with links to the agent's traces and to **Flow: what it is made of**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-3",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Blueprint: Sovereign Agentic SecOps - Views | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/views/urn:custom:query-view:aif-blueprint-sovereign-agentic-secops/topology",
+        "title": "Blueprint: Sovereign Agentic SecOps - Views | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.48576117621527776,
+          "y": 0.4772222222222222,
+          "text": "The same flow as in the Studio, live: each running component coloured by its health.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "outro",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "outro-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "An agent does the work, a person decides",
+          "titleColor": "#FFFFFF",
+          "description": "SUSE Security, Fleet and Rancher Prime with NVIDIA Nemotron in NVIDIA OpenShell, deployed as a Blueprint by SUSE AI Factory with NVIDIA on the customer's own infrastructure, and watched by SUSE Observability.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Back to all demos",
+            "action": {
+              "type": "url",
+              "href": "../",
+              "target": "_self"
+            }
+          },
+          "secondaryCta": {
+            "background": "#FFFFFF1F",
+            "textColor": "#FFFFFF",
+            "animation": "none",
+            "label": "Replay",
+            "action": {
+              "type": "restart"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    }
+  ]
+}

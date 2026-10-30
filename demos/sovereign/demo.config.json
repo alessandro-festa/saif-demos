@@ -1,0 +1,1476 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/npm/@inkly-org/interactive-demo/dist/schema/demo.config.json",
+  "id": "7Wo_8J0Qdp-m",
+  "version": 1,
+  "title": "Sovereign casework",
+  "subtitle": "SUSE AI Factory with NVIDIA · Public sector",
+  "background": {
+    "type": "color",
+    "from": "#0C322C",
+    "to": "#192072"
+  },
+  "theme": {
+    "brand": {
+      "logo": "assets/suse-logo-light.png",
+      "name": "SUSE AI Factory with NVIDIA"
+    }
+  },
+  "chrome": {
+    "controls": "full",
+    "autoplay": false,
+    "branding": false
+  },
+  "chapters": [
+    {
+      "id": "flow",
+      "title": "The architecture",
+      "stepIds": [
+        "flow-cover",
+        "flow-1",
+        "flow-2",
+        "flow-3",
+        "flow-4"
+      ]
+    },
+    {
+      "id": "saif",
+      "title": "Deploy with SUSE AI Factory with NVIDIA",
+      "stepIds": [
+        "saif-cover",
+        "saif-1",
+        "saif-2",
+        "saif-3",
+        "saif-4",
+        "saif-5",
+        "saif-6",
+        "saif-7",
+        "saif-10"
+      ]
+    },
+    {
+      "id": "fleet",
+      "title": "Rolled out by Fleet",
+      "stepIds": [
+        "fleet-cover",
+        "fleet-1",
+        "fleet-2"
+      ]
+    },
+    {
+      "id": "demo",
+      "title": "The use case at work",
+      "stepIds": [
+        "demo-cover",
+        "device-1",
+        "device-2",
+        "device-3",
+        "device-4",
+        "device-5",
+        "device-6",
+        "device-7",
+        "device-8",
+        "device-9",
+        "device-10",
+        "device-11"
+      ]
+    },
+    {
+      "id": "rancher",
+      "title": "Into Rancher",
+      "stepIds": [
+        "rancher-cover",
+        "rancher-1",
+        "rancher-2",
+        "rancher-3",
+        "rancher-4",
+        "rancher-5"
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "SUSE Observability",
+      "stepIds": [
+        "observability-cover",
+        "observability-1",
+        "observability-2",
+        "observability-3"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "kind": "cover",
+      "id": "intro",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "intro-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Sovereign casework",
+          "titleColor": "#FFFFFF",
+          "description": "An agent assesses research proposals for a European funding programme, on EU-made open models only (EuroLLM, on SUSE's vLLM) and air-gapped. It answers the applicant in their language, checks the proposal against the funding manual and briefs the programme officer in German. The officer decides; the agent can't approve, nor use any other model, enforced by its NVIDIA OpenShell sandbox.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Start",
+            "action": {
+              "type": "next"
+            }
+          },
+          "secondaryCta": {
+            "background": "#FFFFFF1F",
+            "textColor": "#FFFFFF",
+            "animation": "none",
+            "label": "All demos",
+            "action": {
+              "type": "url",
+              "href": "../",
+              "target": "_self"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "cover",
+      "id": "flow-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "flow-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "The architecture",
+          "titleColor": "#FFFFFF",
+          "description": "Public Sector – Sovereign Casework is a Blueprint in SUSE AI Factory with NVIDIA. The Studio shows what it is made of.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "flow-1",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=sovereign-casework-0-1-3",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.49166666666666664,
+          "y": 0.5294401041666666,
+          "text": "The architecture of **Public Sector – Sovereign Casework**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-2",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=sovereign-casework-0-1-3",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5883372200859918,
+          "y": 0.5212993367513021,
+          "text": "The **agent**: a NeMo Agent Toolkit agent, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-3",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=sovereign-casework-0-1-3",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.6885882059733073,
+          "y": 0.4841796366373698,
+          "text": "It reasons with **EuroLLM 22B** and translates with **EuroLLM 9B**: EU-made open models served by SUSE's vLLM, nothing else.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "flow-4",
+      "background": {
+        "type": "image",
+        "src": "assets/flow-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/studio/new?aif=sovereign-casework-0-1-3",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5883372200859918,
+          "y": 0.6232688734266493,
+          "text": "Everything else is **outside**: the sandbox refuses it. Enforced by policy, not promised in a prompt.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "saif-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "saif-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Deploy with SUSE AI Factory with NVIDIA",
+          "titleColor": "#FFFFFF",
+          "description": "It is a Blueprint in SUSE AI Factory with NVIDIA. The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API. Here it deploys the Blueprint.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "saif-1",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints",
+        "title": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.36944444444444446,
+          "y": 0.5305381944444445,
+          "text": "The Blueprints of **SUSE AI Factory with NVIDIA**, SUSE's and its partners'. Open **Public Sector – Sovereign Casework**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-2",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints",
+        "title": "Rancher Prime - SUSE AI Factory - Blueprints",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.2900417751736111,
+          "y": 0.6091319444444444,
+          "text": "What the Blueprint brings: its versions, its description and its applications. **Install** it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-3",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=sovereign-casework&version=0.1.3",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.6111111111111112,
+          "y": 0.5305555555555556,
+          "text": "The install wizard: the instance's name and its default namespace.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-4",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=sovereign-casework&version=0.1.3",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9444634331597223,
+          "y": 0.8877777777777778,
+          "text": "Where it runs: a **Fleet Bundle** on the selected cluster.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-5",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=sovereign-casework&version=0.1.3",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9444634331597223,
+          "y": 0.8877777777777778,
+          "text": "Each component's configuration can be changed here, or left as the Blueprint ships it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-6",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-006.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=sovereign-casework&version=0.1.3",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s6_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9444634331597223,
+          "y": 0.8877777777777778,
+          "text": "Review, then **Install**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-7",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-007.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/blueprints/install?name=sovereign-casework&version=0.1.3",
+        "title": "Rancher Prime",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s7_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.9421712239583333,
+          "y": 0.8877777777777778,
+          "text": "**Install**: SUSE AI Factory with NVIDIA schedules the Blueprint on the cluster, through Fleet.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "saif-10",
+      "background": {
+        "type": "image",
+        "src": "assets/saif-screen-010.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Workloads",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/workloads",
+        "title": "Rancher Prime - SUSE AI Factory - Workloads",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s10_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.6903754340277778,
+          "y": 0.5397265625,
+          "text": "**Public Sector – Sovereign Casework** is now a workload of SUSE AI Factory with NVIDIA, its components rolling out.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "fleet-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "fleet-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Rolled out by Fleet",
+          "titleColor": "#FFFFFF",
+          "description": "SUSE AI Factory with NVIDIA deploys through Fleet, Rancher's GitOps engine: the same Blueprint on one cluster or many.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "fleet-1",
+      "background": {
+        "type": "image",
+        "src": "assets/fleet-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - Continuous Delivery - Bundles",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/_/fleet/fleet.cattle.io.bundle?q=sovereign-casework",
+        "title": "Rancher Prime - Continuous Delivery - Bundles",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.4319390190972222,
+          "y": 0.2921701388888889,
+          "text": "In **Continuous Delivery**, Fleet holds one bundle per component of **Public Sector – Sovereign Casework**, each active on its cluster.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "fleet-2",
+      "background": {
+        "type": "image",
+        "src": "assets/fleet-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - Continuous Delivery - Bundle",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/_/fleet/fleet.cattle.io.bundle/fleet-default/sovereign-casework-c-5nhkr-openshell-agent#resources",
+        "title": "Rancher Prime - Continuous Delivery - Bundle",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.62,
+          "y": 0.42,
+          "text": "One bundle in detail: the Kubernetes resources it deployed, and their state.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "demo-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "demo-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "The use case at work",
+          "titleColor": "#FFFFFF",
+          "description": "The use case's own page, step by step: what the agent does, and what it is not allowed to do.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "device-1",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/sovereign",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.29444444444444445,
+          "y": 0.4490190972222222,
+          "text": "The programme office: the **applicant** on the left, the **programme officer** on the right, the OpenShell log underneath.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-2",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/sovereign",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.14016927083333333,
+          "y": 0.5529340277777778,
+          "text": "Write as the applicant, **Ana Ribeiro**, in Portuguese.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-3",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/sovereign",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.27655436197916666,
+          "y": 0.47887152777777775,
+          "text": "The agent answers her in Portuguese, on EuroLLM, and files its assessment.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-4",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/sovereign",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.7348876953125,
+          "y": 0.28219618055555556,
+          "text": "The officer gets the assessment **in German**: the funding manual's rules, checked one by one, and the buttons to decide.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-5",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/sovereign",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.6236680772569444,
+          "y": 0.5529340277777778,
+          "text": "Can the agent approve the grant itself, to save time?",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-6",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-006.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/sovereign",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s6_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.7348876953125,
+          "y": 0.4291753472222222,
+          "text": "No: the approval is refused by the sandbox, **403**, and the agent says so. The officer decides.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-7",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-007.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/sovereign",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s7_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.7727593315972222,
+          "y": 0.5529340277777778,
+          "text": "And a second opinion from GPT-4o?",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-8",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-008.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/sovereign",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s8_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.7348876953125,
+          "y": 0.4413845486111111,
+          "text": "Refused too: the sandbox allows **only the EU models**, and the log shows the denied connection.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-9",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-009.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/sovereign",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s9_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5874810112847222,
+          "y": 0,
+          "text": "The officer confirms: **Bestätigen**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-10",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-010.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/sovereign",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s10_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.27655436197916666,
+          "y": 0.41641927083333335,
+          "text": "The letter goes out to the applicant, in Portuguese.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "device-11",
+      "background": {
+        "type": "image",
+        "src": "assets/device-screen-011.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "SUSE AI Factory for Developers",
+        "sourceUrl": "http://127.0.0.1:8900/demo/sovereign",
+        "title": "SUSE AI Factory for Developers",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s11_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.5236111111111111,
+          "y": 0.8014670138888889,
+          "text": "The OpenShell log: everything the agent did, allowed, and the two attempts it was refused.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "rancher-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "rancher-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Into Rancher",
+          "titleColor": "#FFFFFF",
+          "description": "From SUSE AI Factory with NVIDIA into Rancher, to understand the workload: its resources, its namespace, its pods.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "rancher-1",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Workloads",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/workloads",
+        "title": "Rancher Prime - SUSE AI Factory - Workloads",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.36715494791666664,
+          "y": 0.6877170138888888,
+          "text": "Back in SUSE AI Factory with NVIDIA: open the **Public Sector – Sovereign Casework** workload.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-2",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - SUSE AI Factory - Workloads",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/local/suseai/workloads",
+        "title": "Rancher Prime - SUSE AI Factory - Workloads",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.7047932942708334,
+          "y": 0.7969140625,
+          "text": "Its details: the Blueprint and version it comes from, where it runs, and the Fleet resources underneath. From here, straight into Rancher.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-3",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - spark-8528 - Namespace",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/c-5nhkr/explorer/namespace/ns-sovereign#Resources",
+        "title": "Rancher Prime - spark-8528 - Namespace",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3702853732638889,
+          "y": 0.4153732638888889,
+          "text": "The use case's namespace in Rancher: every resource, its state. Open **Workloads**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-4",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-004.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - spark-8528 - Namespace",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/c-5nhkr/explorer/namespace/ns-sovereign#Workloads",
+        "title": "Rancher Prime - spark-8528 - Namespace",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s4_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.36051703559027776,
+          "y": 0.5898177083333334,
+          "text": "The use case's workloads. Open one.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "rancher-5",
+      "background": {
+        "type": "image",
+        "src": "assets/rancher-screen-005.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Rancher Prime - spark-8528 - Deployment",
+        "sourceUrl": "https://rancher.aif.internal:8443/dashboard/c/c-5nhkr/explorer/apps.deployment/ns-sovereign/mock-office#pods",
+        "title": "Rancher Prime - spark-8528 - Deployment",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s5_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.3,
+          "y": 0.45,
+          "text": "The deployment and its pods, live, with everything Rancher offers to inspect and operate it.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "observability-cover",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "observability-cover-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "SUSE Observability",
+          "titleColor": "#FFFFFF",
+          "description": "SUSE Observability shows the Blueprint's workload as it is right now: its health, its events and its flow.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Continue",
+            "action": {
+              "type": "next"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    },
+    {
+      "kind": "content",
+      "id": "observability-1",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-001.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Blueprints - Views | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/views/urn:stackpack:aif-demos:component-presentation:blueprint",
+        "title": "Blueprints - Views | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s1_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.32218153211805556,
+          "y": 0.39666666666666667,
+          "text": "**SUSE Observability** lists every Blueprint deployed through SUSE AI Factory with NVIDIA, with its health. Open **Public Sector – Sovereign Casework**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-2",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-002.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Components | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/components/urn:aif:blueprint:sovereign-casework",
+        "title": "Components | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s2_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.08726671006944445,
+          "y": 0.615,
+          "text": "The Blueprint as a component, right now: its health and events, with links to the agent's traces and to **Flow: what it is made of**.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "content",
+      "id": "observability-3",
+      "background": {
+        "type": "image",
+        "src": "assets/observability-screen-003.webp",
+        "naturalWidth": 2880,
+        "naturalHeight": 1800,
+        "alt": "Blueprint: Public Sector – Sovereign Casework - Views | SUSE Observability",
+        "sourceUrl": "http://spark-8528.local:30880/#/views/urn:custom:query-view:aif-blueprint-sovereign-casework/topology",
+        "title": "Blueprint: Public Sector – Sovereign Casework - Views | SUSE Observability",
+        "objectFit": "cover"
+      },
+      "advance": {
+        "trigger": "click"
+      },
+      "annotations": [
+        {
+          "id": "s3_cursor",
+          "type": "message",
+          "variant": "cursor",
+          "x": 0.48576117621527776,
+          "y": 0.4772222222222222,
+          "text": "The same flow as in the Studio, live: each running component coloured by its health.",
+          "advancesStep": true,
+          "textAlign": "left",
+          "anchor": "auto",
+          "showNavigation": true,
+          "showMessage": true
+        }
+      ]
+    },
+    {
+      "kind": "cover",
+      "id": "outro",
+      "widgets": [
+        {
+          "type": "headline",
+          "id": "outro-h",
+          "logo": {
+            "src": "assets/suse-logo-light.png",
+            "alt": "SUSE",
+            "height": 48
+          },
+          "title": "Sovereign by design",
+          "titleColor": "#FFFFFF",
+          "description": "EU-made models on SUSE's vLLM in NVIDIA OpenShell, deployed as a Blueprint by SUSE AI Factory with NVIDIA through Fleet on the public administration's own infrastructure, operated in Rancher and watched by SUSE Observability.",
+          "descriptionColor": "#E6F7EF",
+          "textAlign": "middle",
+          "cta": {
+            "background": "#30BA78",
+            "textColor": "#0C322C",
+            "animation": "none",
+            "label": "Back to all demos",
+            "action": {
+              "type": "url",
+              "href": "../",
+              "target": "_self"
+            }
+          },
+          "secondaryCta": {
+            "background": "#FFFFFF1F",
+            "textColor": "#FFFFFF",
+            "animation": "none",
+            "label": "Replay",
+            "action": {
+              "type": "restart"
+            }
+          }
+        }
+      ],
+      "background": {
+        "type": "color",
+        "from": "#0C322C",
+        "to": "#192072"
+      },
+      "advance": {
+        "trigger": "click"
+      }
+    }
+  ]
+}
