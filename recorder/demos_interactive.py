@@ -226,7 +226,8 @@ def record_observability(demo):
     with segment(demo, "observability", so + "/#/views/urn:stackpack:aif-demos:component-presentation:blueprint") as b:
         b.wait("/Showing \\d+ Blueprints/.test(document.body.innerText)", timeout=90)
         pv.settle(b, 3)
-        shot(b, text_el(p["name"]))
+        # Its row, by the Blueprint's title (the list only draws the rows in view: else the list itself).
+        shot(b, f"({text_el(BLUEPRINT[demo][2], 'a')}) || ({text_el('Showing')})")
         b.go(so + f"/#/components/urn:aif:blueprint:{p['blueprint']}", settle=2)
         b.wait("/Flow: what it is made of/.test(document.body.innerText)", timeout=60)
         pv.settle(b, 3)

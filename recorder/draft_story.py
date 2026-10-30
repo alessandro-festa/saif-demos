@@ -24,8 +24,12 @@ def captured(slug, segment):
     return json.loads(found[0].read_text())["steps"] if found else []
 
 
-def numbered(texts):
-    return {str(i + 1): ({"drop": True} if t is None else {"text": t}) for i, t in enumerate(texts)}
+def numbered(texts, at=None):
+    """Step texts by number; None drops the step; at: {number: (x, y)} moves a hotspot."""
+    steps = {str(i + 1): ({"drop": True} if t is None else {"text": t}) for i, t in enumerate(texts)}
+    for n, (x, y) in (at or {}).items():
+        steps[str(n)].update({"x": x, "y": y})
+    return steps
 
 
 def flow_steps(name):
@@ -49,7 +53,7 @@ def saif_steps(name):
         "Where it runs: a **Fleet Bundle** on the selected cluster.",
         "Each component's configuration can be changed here, or left as the Blueprint ships it.",
         "Review, then **Install**.",
-        "Scheduled: SUSE AI Factory with NVIDIA hands the Blueprint to Fleet.",
+        "**Install**: SUSE AI Factory with NVIDIA schedules the Blueprint on the cluster, through Fleet.",
         None,
         None,
         f"**{name}** is now a workload of SUSE AI Factory with NVIDIA, its components rolling out.",
@@ -60,7 +64,7 @@ def fleet_steps(name):
     return numbered([
         f"In **Continuous Delivery**, Fleet holds one bundle per component of **{name}**, each active on its cluster.",
         "One bundle in detail: the Kubernetes resources it deployed, and their state.",
-    ])
+    ], at={2: (0.62, 0.42)})
 
 
 def guided_device_steps(slug):
@@ -72,7 +76,14 @@ def guided_device_steps(slug):
         texts.append(f"Next: **{title}**.")
         for label in runs:
             texts.append(f"**{label}**: running in the agent's sandbox now.")
-            texts.append(says.get(label, "The result."))
+            if label in says:
+                texts.append(says[label])
+            elif "try to" in label.lower() and "internet" not in label.lower():
+                texts.append("OpenShell's answer: **403, policy denied**. Enforced by policy, not promised in a prompt.")
+            elif "internet" in label.lower():
+                texts.append("**Blocked**, every time, and logged in red: the data stays on the customer's own infrastructure.")
+            else:
+                texts.append(f"The result of **{label.lower()}**, computed inside the agent's sandbox.")
     return numbered(texts)
 
 
@@ -84,7 +95,7 @@ def rancher_steps(name):
         "The use case's namespace in Rancher: every resource, its state. Open **Workloads**.",
         "The use case's workloads. Open one.",
         "The deployment and its pods, live, with everything Rancher offers to inspect and operate it.",
-    ])
+    ], at={5: (0.3, 0.45)})
 
 
 def observability_steps(name):
@@ -132,7 +143,7 @@ def draft(slug):
         title, sub = g["title"]
         intro = g["flow"].replace("Here's what we'll see. ", "")
         close = g["close"].replace("as a SUSE Blueprint on SUSE AI Factory with NVIDIA",
-                                   "deployed as a Blueprint through SUSE AI Factory with NVIDIA")
+                                   "deployed as a Blueprint through SUSE AI Factory with NVIDIA").replace("deployed deployed", "deployed")
         dev = guided_device_steps(slug)
     else:
         title, sub, intro, close = name, "SUSE AI Factory with NVIDIA", "", ""

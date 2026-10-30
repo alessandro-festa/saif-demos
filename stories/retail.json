@@ -1,0 +1,220 @@
+{
+  "title": "Conversational shopping assistant",
+  "subtitle": "SUSE AI Factory with NVIDIA · Retail",
+  "intro": "A furniture store's customer sends a photo and a request. A topic rail checks every message first. Then an AI assistant, built with the NeMo Agent Toolkit and NVIDIA Nemotron, searches the catalog by words and by photo, checks stock and prepares the order, inside an NVIDIA OpenShell sandbox. It can never take payment, change a price or create a discount.",
+  "chapters": [
+    {
+      "id": "flow",
+      "title": "The architecture",
+      "blurb": "Conversational Shopping Assistant is a Blueprint in SUSE AI Factory with NVIDIA. The Studio shows what it is made of.",
+      "segments": [
+        {
+          "name": "flow",
+          "steps": {
+            "1": {
+              "text": "The architecture of **Conversational Shopping Assistant**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy."
+            },
+            "2": {
+              "text": "The **agent**: a NeMo Agent Toolkit agent, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it."
+            },
+            "3": {
+              "text": "It reasons with an **NVIDIA NIM** shared by every use case from the *NVIDIA Models (shared)* Blueprint: downloaded once, always up."
+            },
+            "4": {
+              "text": "Everything else is **outside**: the sandbox refuses it. Enforced by policy, not promised in a prompt."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "saif",
+      "title": "Deploy with SUSE AI Factory with NVIDIA",
+      "blurb": "It is a Blueprint in SUSE AI Factory with NVIDIA. The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API. Here it deploys the Blueprint.",
+      "segments": [
+        {
+          "name": "saif",
+          "steps": {
+            "1": {
+              "text": "The Blueprints of **SUSE AI Factory with NVIDIA**, SUSE's and its partners'. Open **Conversational Shopping Assistant**."
+            },
+            "2": {
+              "text": "What the Blueprint brings: its versions, its description and its applications. **Install** it."
+            },
+            "3": {
+              "text": "The install wizard: the instance's name and its default namespace."
+            },
+            "4": {
+              "text": "Where it runs: a **Fleet Bundle** on the selected cluster."
+            },
+            "5": {
+              "text": "Each component's configuration can be changed here, or left as the Blueprint ships it."
+            },
+            "6": {
+              "text": "Review, then **Install**."
+            },
+            "7": {
+              "text": "**Install**: SUSE AI Factory with NVIDIA schedules the Blueprint on the cluster, through Fleet."
+            },
+            "8": {
+              "drop": true
+            },
+            "9": {
+              "drop": true
+            },
+            "10": {
+              "text": "**Conversational Shopping Assistant** is now a workload of SUSE AI Factory with NVIDIA, its components rolling out."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fleet",
+      "title": "Rolled out by Fleet",
+      "blurb": "SUSE AI Factory with NVIDIA deploys through Fleet, Rancher's GitOps engine: the same Blueprint on one cluster or many.",
+      "segments": [
+        {
+          "name": "fleet",
+          "steps": {
+            "1": {
+              "text": "In **Continuous Delivery**, Fleet holds one bundle per component of **Conversational Shopping Assistant**, each active on its cluster."
+            },
+            "2": {
+              "text": "One bundle in detail: the Kubernetes resources it deployed, and their state.",
+              "x": 0.62,
+              "y": 0.42
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "title": "The use case at work",
+      "blurb": "The use case's own page, step by step: what the agent does, and what it is not allowed to do.",
+      "segments": [
+        {
+          "name": "device",
+          "steps": {
+            "1": {
+              "text": "The use case's own page: the Blueprint is **ready** in SUSE AI Factory with NVIDIA and the agent's sandbox is up. The log on the right is OpenShell's: every request the agent makes, allowed or denied."
+            },
+            "2": {
+              "text": "Next: **Search by words and by photo**."
+            },
+            "3": {
+              "text": "**Search by words**: running in the agent's sandbox now."
+            },
+            "4": {
+              "text": "Llama Nemotron Embed VL puts words and images in one space: a description finds matching products, and a photo finds the ones that look like it."
+            },
+            "5": {
+              "text": "**Search by photo**: running in the agent's sandbox now."
+            },
+            "6": {
+              "text": "The result of **search by photo**, computed inside the agent's sandbox."
+            },
+            "7": {
+              "text": "Next: **Brand safety: the topic rail**."
+            },
+            "8": {
+              "text": "**Check five messages**: running in the agent's sandbox now."
+            },
+            "9": {
+              "text": "The topic rail lets product questions through, and politely refuses politics, discount-code demands and attempts to rewrite the rules."
+            },
+            "10": {
+              "text": "Next: **The assistant serves a customer**."
+            },
+            "11": {
+              "text": "**Run the assistant**: running in the agent's sandbox now."
+            },
+            "12": {
+              "text": "Then the assistant serves a customer on its own: the light from her photo, a green chair under three hundred euros, a warm rug, stock checked in Turin, and the order prepared."
+            },
+            "13": {
+              "text": "Next: **Who pays, who sets prices? Not the assistant**."
+            },
+            "14": {
+              "text": "**Let the assistant try to pay, reprice, discount**: running in the agent's sandbox now."
+            },
+            "15": {
+              "text": "Can it take payment, change a price or create a discount? No. OpenShell refuses all three."
+            },
+            "16": {
+              "text": "Next: **The confirmation, and the boundary**."
+            },
+            "17": {
+              "text": "**Show the confirmation**: running in the agent's sandbox now."
+            },
+            "18": {
+              "text": "The customer gets her order, ready for click and collect, waiting for her payment. And the store's data stays in the store."
+            },
+            "19": {
+              "text": "**Try to reach the internet**: running in the agent's sandbox now."
+            },
+            "20": {
+              "text": "**Blocked**, every time, and logged in red: the data stays on the customer's own infrastructure."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "rancher",
+      "title": "Into Rancher",
+      "blurb": "From SUSE AI Factory with NVIDIA into Rancher, to understand the workload: its resources, its namespace, its pods.",
+      "segments": [
+        {
+          "name": "rancher",
+          "steps": {
+            "1": {
+              "text": "Back in SUSE AI Factory with NVIDIA: open the **Conversational Shopping Assistant** workload."
+            },
+            "2": {
+              "text": "Its details: the Blueprint and version it comes from, where it runs, and the Fleet resources underneath. From here, straight into Rancher."
+            },
+            "3": {
+              "text": "The use case's namespace in Rancher: every resource, its state. Open **Workloads**."
+            },
+            "4": {
+              "text": "The use case's workloads. Open one."
+            },
+            "5": {
+              "text": "The deployment and its pods, live, with everything Rancher offers to inspect and operate it.",
+              "x": 0.3,
+              "y": 0.45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "SUSE Observability",
+      "blurb": "SUSE Observability shows the Blueprint's workload as it is right now: its health, its events and its flow.",
+      "segments": [
+        {
+          "name": "observability",
+          "steps": {
+            "1": {
+              "text": "**SUSE Observability** lists every Blueprint deployed through SUSE AI Factory with NVIDIA, with its health. Open **Conversational Shopping Assistant**."
+            },
+            "2": {
+              "text": "The Blueprint as a component, right now: its health and events, with links to the agent's traces and to **Flow: what it is made of**."
+            },
+            "3": {
+              "text": "The same flow as in the Studio, live: each running component coloured by its health."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "outro": {
+    "title": "A person stays in charge",
+    "description": "NVIDIA Nemotron in NVIDIA OpenShell, deployed as a Blueprint through SUSE AI Factory with NVIDIA, on the retailer's own infrastructure. Brand-safe by design."
+  },
+  "id": "OnKci3cgxfx_"
+}

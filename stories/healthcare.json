@@ -1,0 +1,220 @@
+{
+  "title": "Ambient clinical documentation",
+  "subtitle": "SUSE AI Factory with NVIDIA · Healthcare",
+  "intro": "A consultation is recorded. NVIDIA Parakeet transcribes it, and an AI agent, built with the NeMo Agent Toolkit and NVIDIA Nemotron, drafts the clinical note, the codes and the tests, inside an NVIDIA OpenShell sandbox. The doctor reviews and signs. Patient data never leaves the practice.",
+  "chapters": [
+    {
+      "id": "flow",
+      "title": "The architecture",
+      "blurb": "Ambient Clinical Documentation is a Blueprint in SUSE AI Factory with NVIDIA. The Studio shows what it is made of.",
+      "segments": [
+        {
+          "name": "flow",
+          "steps": {
+            "1": {
+              "text": "The architecture of **Ambient Clinical Documentation**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy."
+            },
+            "2": {
+              "text": "The **agent**: a NeMo Agent Toolkit agent, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it."
+            },
+            "3": {
+              "text": "It reasons with an **NVIDIA NIM** shared by every use case from the *NVIDIA Models (shared)* Blueprint: downloaded once, always up."
+            },
+            "4": {
+              "text": "Everything else is **outside**: the sandbox refuses it. Enforced by policy, not promised in a prompt."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "saif",
+      "title": "Deploy with SUSE AI Factory with NVIDIA",
+      "blurb": "It is a Blueprint in SUSE AI Factory with NVIDIA. The SUSE AI Factory with NVIDIA UI is an extension of the Rancher Prime UI, and it can also be consumed via API. Here it deploys the Blueprint.",
+      "segments": [
+        {
+          "name": "saif",
+          "steps": {
+            "1": {
+              "text": "The Blueprints of **SUSE AI Factory with NVIDIA**, SUSE's and its partners'. Open **Ambient Clinical Documentation**."
+            },
+            "2": {
+              "text": "What the Blueprint brings: its versions, its description and its applications. **Install** it."
+            },
+            "3": {
+              "text": "The install wizard: the instance's name and its default namespace."
+            },
+            "4": {
+              "text": "Where it runs: a **Fleet Bundle** on the selected cluster."
+            },
+            "5": {
+              "text": "Each component's configuration can be changed here, or left as the Blueprint ships it."
+            },
+            "6": {
+              "text": "Review, then **Install**."
+            },
+            "7": {
+              "text": "**Install**: SUSE AI Factory with NVIDIA schedules the Blueprint on the cluster, through Fleet."
+            },
+            "8": {
+              "drop": true
+            },
+            "9": {
+              "drop": true
+            },
+            "10": {
+              "text": "**Ambient Clinical Documentation** is now a workload of SUSE AI Factory with NVIDIA, its components rolling out."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fleet",
+      "title": "Rolled out by Fleet",
+      "blurb": "SUSE AI Factory with NVIDIA deploys through Fleet, Rancher's GitOps engine: the same Blueprint on one cluster or many.",
+      "segments": [
+        {
+          "name": "fleet",
+          "steps": {
+            "1": {
+              "text": "In **Continuous Delivery**, Fleet holds one bundle per component of **Ambient Clinical Documentation**, each active on its cluster."
+            },
+            "2": {
+              "text": "One bundle in detail: the Kubernetes resources it deployed, and their state.",
+              "x": 0.62,
+              "y": 0.42
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "title": "The use case at work",
+      "blurb": "The use case's own page, step by step: what the agent does, and what it is not allowed to do.",
+      "segments": [
+        {
+          "name": "device",
+          "steps": {
+            "1": {
+              "text": "The use case's own page: the Blueprint is **ready** in SUSE AI Factory with NVIDIA and the agent's sandbox is up. The log on the right is OpenShell's: every request the agent makes, allowed or denied."
+            },
+            "2": {
+              "text": "Next: **Parakeet listens**."
+            },
+            "3": {
+              "text": "**Transcribe**: running in the agent's sandbox now."
+            },
+            "4": {
+              "text": "NVIDIA Parakeet transcribes the consultation on the GPU, streamed in small chunks as a microphone in the room would send it, and we check the word error rate."
+            },
+            "5": {
+              "text": "**Compare with what was said**: running in the agent's sandbox now."
+            },
+            "6": {
+              "text": "The result of **compare with what was said**, computed inside the agent's sandbox."
+            },
+            "7": {
+              "text": "Next: **Nemotron drafts the note**."
+            },
+            "8": {
+              "text": "**Draft the note**: running in the agent's sandbox now."
+            },
+            "9": {
+              "text": "Nemotron turns the transcript and the record into a SOAP note, using only what was said and what is on record."
+            },
+            "10": {
+              "text": "Next: **The agent documents the visit**."
+            },
+            "11": {
+              "text": "**Run the agent**: running in the agent's sandbox now."
+            },
+            "12": {
+              "text": "The agent then documents the whole visit on its own: the note, the codes, the tests. Sped up here."
+            },
+            "13": {
+              "text": "Next: **Who signs? Not the agent**."
+            },
+            "14": {
+              "text": "**Let the agent try to sign and prescribe**: running in the agent's sandbox now."
+            },
+            "15": {
+              "text": "Can the agent sign the note, or prescribe? No. OpenShell refuses: the doctor signs."
+            },
+            "16": {
+              "text": "Next: **The note, and the boundary**."
+            },
+            "17": {
+              "text": "**Show the note for review**: running in the agent's sandbox now."
+            },
+            "18": {
+              "text": "The draft waits for the doctor's signature. And any attempt to reach the internet is denied, and logged."
+            },
+            "19": {
+              "text": "**Try to reach the internet**: running in the agent's sandbox now."
+            },
+            "20": {
+              "text": "**Blocked**, every time, and logged in red: the data stays on the customer's own infrastructure."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "rancher",
+      "title": "Into Rancher",
+      "blurb": "From SUSE AI Factory with NVIDIA into Rancher, to understand the workload: its resources, its namespace, its pods.",
+      "segments": [
+        {
+          "name": "rancher",
+          "steps": {
+            "1": {
+              "text": "Back in SUSE AI Factory with NVIDIA: open the **Ambient Clinical Documentation** workload."
+            },
+            "2": {
+              "text": "Its details: the Blueprint and version it comes from, where it runs, and the Fleet resources underneath. From here, straight into Rancher."
+            },
+            "3": {
+              "text": "The use case's namespace in Rancher: every resource, its state. Open **Workloads**."
+            },
+            "4": {
+              "text": "The use case's workloads. Open one."
+            },
+            "5": {
+              "text": "The deployment and its pods, live, with everything Rancher offers to inspect and operate it.",
+              "x": 0.3,
+              "y": 0.45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "SUSE Observability",
+      "blurb": "SUSE Observability shows the Blueprint's workload as it is right now: its health, its events and its flow.",
+      "segments": [
+        {
+          "name": "observability",
+          "steps": {
+            "1": {
+              "text": "**SUSE Observability** lists every Blueprint deployed through SUSE AI Factory with NVIDIA, with its health. Open **Ambient Clinical Documentation**."
+            },
+            "2": {
+              "text": "The Blueprint as a component, right now: its health and events, with links to the agent's traces and to **Flow: what it is made of**."
+            },
+            "3": {
+              "text": "The same flow as in the Studio, live: each running component coloured by its health."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "outro": {
+    "title": "A person stays in charge",
+    "description": "NVIDIA Parakeet and Nemotron in NVIDIA OpenShell, deployed as a Blueprint through SUSE AI Factory with NVIDIA, on the practice's own infrastructure. The doctor stays in charge."
+  },
+  "id": "DBCUCN5VaG35"
+}
