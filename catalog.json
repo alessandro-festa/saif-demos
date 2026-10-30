@@ -1,0 +1,76 @@
+{
+  "site": "https://alessandro-festa.github.io/saif-demos/",
+  "demos": [
+    {
+      "slug": "developer-overview",
+      "title": "SUSE AI Factory for developers",
+      "tag": "Platform",
+      "pitch": "A tour for developers: the NVIDIA catalog, the Workspace, Blueprints drawn in the Studio, one-click deploy through SUSE AI Factory with NVIDIA, the Rancher Prime UI and SUSE Observability.",
+      "chapters": ["Catalog", "Studio", "AI Factory", "Observability"],
+      "featured": true
+    },
+    {
+      "slug": "manufacturing",
+      "title": "Factory operations & visual inspection",
+      "tag": "Manufacturing",
+      "pitch": "An agent watches three production lines through a vision model, finds defective parts, traces them to the machine and opens tickets a supervisor approves.",
+      "chapters": ["Flow", "AI Factory", "Observability"]
+    },
+    {
+      "slug": "finance",
+      "title": "Fraud detection & investigation",
+      "tag": "Banking",
+      "pitch": "A fraud model scores every payment; an agent investigates each alert, screens payees and opens cases the analyst must confirm, with customer data kept on premises.",
+      "chapters": ["Flow", "AI Factory", "Observability"]
+    },
+    {
+      "slug": "telco",
+      "title": "Network configuration & autonomous operations",
+      "tag": "Telecom",
+      "pitch": "An agent reads the radio network's KPIs, finds what is wrong, searches the runbooks and validates a fix in the simulator for the NOC engineer to apply.",
+      "chapters": ["Flow", "AI Factory", "Observability"]
+    },
+    {
+      "slug": "retail",
+      "title": "Conversational shopping assistant",
+      "tag": "Retail",
+      "pitch": "An assistant understands words and photos, checks stock and prepares the order, while the runtime stops it from taking payment or inventing a discount.",
+      "chapters": ["Flow", "AI Factory", "Observability"]
+    },
+    {
+      "slug": "healthcare",
+      "title": "Ambient clinical documentation",
+      "tag": "Healthcare",
+      "pitch": "A consultation is transcribed on the GPU; an agent drafts the SOAP note and leaves the signature and orders to the doctor, with patient data never leaving.",
+      "chapters": ["Flow", "AI Factory", "Observability"]
+    },
+    {
+      "slug": "secops",
+      "title": "Sovereign agentic SecOps",
+      "tag": "Security",
+      "pitch": "SUSE Security finds vulnerable images; an agent checks the policy and opens one pull request moving them to SUSE images. A person merges, Fleet deploys, SUSE Security rescans.",
+      "chapters": ["Flow", "AI Factory", "SUSE Security", "Observability"]
+    },
+    {
+      "slug": "traffic",
+      "title": "Traffic incident management",
+      "tag": "Smart city",
+      "pitch": "An agent watches four road cameras through NVIDIA Cosmos Reason2 and asks the control room operator what to do. The operator decides; the agent can't.",
+      "chapters": ["Flow", "AI Factory", "Observability"]
+    },
+    {
+      "slug": "sovereign",
+      "title": "Sovereign casework",
+      "tag": "Public sector",
+      "pitch": "An agent assesses research proposals on EU-made open models only (EuroLLM), answers the applicant in their language and briefs the programme officer, who decides.",
+      "chapters": ["Flow", "AI Factory", "Observability"]
+    },
+    {
+      "slug": "developer-sandbox",
+      "title": "Developer Sandbox",
+      "tag": "Developers",
+      "pitch": "Code with Claude Code on the platform's own model inside an NVIDIA OpenShell sandbox: approved destinations allowed, everything else denied, policy changed live.",
+      "chapters": ["Flow", "AI Factory", "SUSE Security", "Observability"]
+    }
+  ]
+}

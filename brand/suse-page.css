@@ -1,0 +1,92 @@
+/* Injected into every built demo page by scripts/site.mjs: SUSE colours for
+   the page bar and the canvas around the Inkly player. */
+:root {
+  --surface-2: var(--suse-pine);
+  --line-soft: rgba(255, 255, 255, 0.14);
+  --ink-strong: #ffffff;
+  --ink-muted: var(--suse-mint);
+  --canvas: var(--suse-pine);
+}
+
+body {
+  font-family: var(--suse-font);
+  background: var(--suse-pine);
+}
+
+#root {
+  background: linear-gradient(160deg, var(--suse-pine) 0%, #0f3d36 55%, var(--suse-midnight) 140%);
+  background-image: linear-gradient(160deg, var(--suse-pine) 0%, #0f3d36 55%, var(--suse-midnight) 140%);
+}
+
+header.demo-page-bar {
+  background: var(--suse-pine);
+  border-bottom: 1px solid rgba(144, 235, 205, 0.18);
+}
+
+.demo-page-btn,
+.demo-page-demo-name {
+  color: #ffffff;
+}
+
+.demo-page-demo-name {
+  font-family: var(--suse-font);
+  font-weight: 600;
+}
+
+.demo-page-brand-word {
+  font-family: var(--suse-font);
+}
+
+.suse-brand-logos {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.suse-brand-logos img {
+  display: block;
+  height: 26px;
+  width: auto;
+}
+
+.suse-brand-logos .suse-brand-sep {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.demo-page-cta-scope[data-theme="default"] {
+  --demo-page-accent: var(--suse-jungle);
+  --demo-page-surface: var(--suse-pine);
+  --demo-page-line: rgba(255, 255, 255, 0.35);
+  --demo-page-ink-strong: #ffffff;
+}
+
+.demo-page-cta-scope[data-theme="default"] .demo-page-cta {
+  font-family: var(--suse-font);
+  border-radius: 6px;
+}
+
+.demo-page-cta-scope[data-theme="default"] .demo-page-cta.is-primary {
+  background-image: none;
+  background-color: var(--suse-jungle);
+  border-color: var(--suse-jungle);
+  color: var(--suse-pine);
+  font-weight: 600;
+}
+
+.demo-page-cta-scope[data-theme="default"] .demo-page-cta.is-secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: none;
+}
+
+/* The player's window title pill: the SUSE Geeko instead of Inkly's indigo square. */
+.demo-header-title-icon {
+  width: 24px !important;
+  height: 14px !important;
+  border-radius: 0 !important;
+  background: url("../brand/suse-geeko.png") center / contain no-repeat !important;
+}

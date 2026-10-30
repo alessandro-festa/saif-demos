@@ -1,0 +1,14 @@
+{
+  "name": "saif-demos",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "interactive-demo dev",
+    "validate": "interactive-demo validate --strict",
+    "merge": "node scripts/merge-segments.mjs",
+    "site": "node scripts/site.mjs"
+  },
+  "devDependencies": {
+    "@inkly-org/interactive-demo-cli": "^0.1.8"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "SUSE AI Factory with NVIDIA demos",
+  "tokens": {
+    "primary": "#30BA78",
+    "secondary": "#EFEFEF",
+    "font": "SUSE, Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    "radius": "6px"
+  },
+  "brand": {
+    "logo": "brand/suse-logo-light.png",
+    "name": "SUSE AI Factory with NVIDIA",
+    "logoHref": "https://alessandro-festa.github.io/saif-demos/",
+    "cta": {
+      "label": "All demos",
+      "href": "https://alessandro-festa.github.io/saif-demos/"
+    }
+  }
+}

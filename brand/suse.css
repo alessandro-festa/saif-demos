@@ -1,0 +1,19 @@
+/* SUSE brand: palette and font shared by the start page and every demo page. */
+@font-face {
+  font-family: "SUSE";
+  src: url("./fonts/suse-latin-wght.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --suse-jungle: #30ba78;
+  --suse-pine: #0c322c;
+  --suse-midnight: #192072;
+  --suse-waterhole: #2453ff;
+  --suse-mint: #90ebcd;
+  --suse-persimmon: #fe7c3f;
+  --suse-fog: #efefef;
+  --suse-font: "SUSE", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
