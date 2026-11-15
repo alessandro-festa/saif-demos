@@ -10,6 +10,7 @@ Every demo tells the same story (user, 2026-10-30):
   security       SUSE Security, where the use case needs it
   observability  SUSE Observability: the Blueprint's workload as it is right now
 """
+import contextlib
 import json
 import subprocess
 import threading
@@ -67,9 +68,46 @@ def device_api(path, body):
 
 # --------------------------------------------------------------------------- segments ---
 
+# The Studio as the architecture shows it: dark, the menu, the catalog and the side panel folded away,
+# the Blueprint over the whole window. Kept in the device's localStorage, so set before the capture opens
+# the Studio and put back after (the demo's own pages share the origin).
+STUDIO_VIEW = {"aif-theme": "dark", "aif-nav-collapsed": "1",
+               "aif-dev:studio:hide-palette": "1", "aif-dev:studio:hide-side": "1"}
+
+
+def _local_storage(values):
+    """Writes values (None removes the key) into the device's localStorage; returns what was there."""
+    t = Tab()
+    try:
+        t.go(record.DEVICE + "/", settle=3)
+        return t.js(f"""(() => {{ const v = {json.dumps(values)}, old = {{}};
+            for (const [k, x] of Object.entries(v)) {{ old[k] = localStorage.getItem(k);
+              x === null ? localStorage.removeItem(k) : localStorage.setItem(k, x) }}
+            return JSON.stringify(old) }})()""")
+    finally:
+        t.close()
+
+
+@contextlib.contextmanager
+def studio_view():
+    old = json.loads(_local_storage(STUDIO_VIEW) or "{}")
+    try:
+        yield
+    finally:
+        _local_storage({k: old.get(k) for k in STUDIO_VIEW})
+
+
+# Selecting a node switches the side panel's tab, which unfolds it; this keeps it folded (the Studio's own
+# folded layout) so every step shows the whole architecture, the node's inspector on the canvas.
+KEEP_FOLDED = r"""(() => { const s = document.createElement('style'); s.textContent =
+  '.body:not(.no-side) { grid-template-columns: 14rem 1fr 0 !important } .body .side, .fold-tab.right { display: none !important }';
+  document.head.append(s) })()"""
+
+
 def record_flow(demo):
     """The architecture: the use case's Blueprint in the Studio, the agent, the model, what lies outside."""
-    with segment(demo, "flow", f"{record.DEVICE}/studio/new?aif={studio_id(demo)}") as b:
+    with studio_view(), segment(demo, "flow", f"{record.DEVICE}/studio/new?aif={studio_id(demo)}") as b:
+        b.js(KEEP_FOLDED)
         b.wait(FLOW_READY, timeout=60)
         time.sleep(4)
         shot(b, "document.querySelector('.vue-flow__pane')")  # the whole flow

@@ -1,11 +1,46 @@
 * { box-sizing: border-box; }
 
+/* Light and dark: the system's choice unless the visitor picks one (the toggle sets data-theme). */
+:root {
+  color-scheme: light;
+  --page: var(--suse-fog);
+  --ink: var(--suse-pine);
+  --ink-soft: rgba(12, 50, 44, 0.8);
+  --ink-faint: rgba(12, 50, 44, 0.6);
+  --ink-ghost: rgba(12, 50, 44, 0.45);
+  --card: #ffffff;
+  --card-line: rgba(12, 50, 44, 0.1);
+  --shadow: rgba(12, 50, 44, 0.35);
+  --chip: rgba(144, 235, 205, 0.45);
+  --chip-ink: var(--suse-pine);
+  --chip-security: rgba(254, 124, 63, 0.18);
+  --chip-security-ink: #9a3d10;
+  --muted-btn: var(--suse-fog);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #081f1b;
+  --ink: #e6f7ef;
+  --ink-soft: rgba(230, 247, 239, 0.78);
+  --ink-faint: rgba(230, 247, 239, 0.55);
+  --ink-ghost: rgba(230, 247, 239, 0.4);
+  --card: #0f2d28;
+  --card-line: rgba(144, 235, 205, 0.14);
+  --shadow: rgba(0, 0, 0, 0.6);
+  --chip: rgba(48, 186, 120, 0.2);
+  --chip-ink: var(--suse-mint);
+  --chip-security: rgba(254, 124, 63, 0.2);
+  --chip-security-ink: #ffb08a;
+  --muted-btn: rgba(255, 255, 255, 0.08);
+}
+
 html, body { margin: 0; }
 
 body {
   font-family: var(--suse-font);
-  color: var(--suse-pine);
-  background: var(--suse-fog);
+  color: var(--ink);
+  background: var(--page);
   font-size: 16px;
   line-height: 1.5;
 }
@@ -22,6 +57,37 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.theme-toggle:hover { background: rgba(255, 255, 255, 0.14); }
+
+.theme-toggle:focus-visible { outline: 2px solid var(--suse-jungle); outline-offset: 2px; }
+
+.theme-toggle svg { width: 20px; height: 20px; }
+
+.theme-toggle .sun,
+[data-theme="dark"] .theme-toggle .moon { display: none; }
+
+[data-theme="dark"] .theme-toggle .sun { display: block; }
 
 .logos {
   display: flex;
@@ -64,19 +130,19 @@ h2 {
 .card {
   display: flex;
   flex-direction: column;
-  background: #ffffff;
+  background: var(--card);
   border-radius: 8px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  border: 1px solid rgba(12, 50, 44, 0.1);
+  border: 1px solid var(--card-line);
   transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
 }
 
 a.card:hover {
   transform: translateY(-2px);
   border-color: var(--suse-jungle);
-  box-shadow: 0 10px 28px -12px rgba(12, 50, 44, 0.35);
+  box-shadow: 0 10px 28px -12px var(--shadow);
 }
 
 .thumb {
@@ -105,7 +171,7 @@ a.card:hover {
 
 .card h3 { font-size: 20px; font-weight: 600; line-height: 1.25; margin: 0; }
 
-.card p { margin: 0; font-size: 15px; color: rgba(12, 50, 44, 0.8); flex: 1; }
+.card p { margin: 0; font-size: 15px; color: var(--ink-soft); flex: 1; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 
@@ -114,11 +180,11 @@ a.card:hover {
   font-weight: 500;
   padding: 2px 10px;
   border-radius: 999px;
-  background: rgba(144, 235, 205, 0.45);
-  color: var(--suse-pine);
+  background: var(--chip);
+  color: var(--chip-ink);
 }
 
-.chip.security { background: rgba(254, 124, 63, 0.18); color: #9a3d10; }
+.chip.security { background: var(--chip-security); color: var(--chip-security-ink); }
 
 .action {
   margin-top: 4px;
@@ -132,15 +198,15 @@ a.card:hover {
 }
 
 .card.soon h3,
-.card.soon p { color: rgba(12, 50, 44, 0.55); }
+.card.soon p { color: var(--ink-faint); }
 
-.card.soon .tag { color: rgba(12, 50, 44, 0.45); }
+.card.soon .tag { color: var(--ink-ghost); }
 
-.card.soon .action { background: var(--suse-fog); color: rgba(12, 50, 44, 0.6); }
+.card.soon .action { background: var(--muted-btn); color: var(--ink-faint); }
 
 .featured {
   flex-direction: row;
-  box-shadow: 0 16px 40px -20px rgba(12, 50, 44, 0.5);
+  box-shadow: 0 16px 40px -20px var(--shadow);
 }
 
 .featured .thumb { flex: 0 0 52%; aspect-ratio: auto; min-height: 280px; }
@@ -162,5 +228,9 @@ footer {
   gap: 8px;
   padding: 32px 24px 48px;
   font-size: 13px;
-  color: rgba(12, 50, 44, 0.6);
+  color: var(--ink-faint);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
 }
