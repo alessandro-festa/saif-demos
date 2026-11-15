@@ -183,7 +183,7 @@
       "id": "flow-1",
       "background": {
         "type": "image",
-        "src": "assets/flow-screen-001.webp",
+        "src": "assets/flow-screen-001-d1f6ca2f.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -199,12 +199,12 @@
           "id": "s1_cursor",
           "type": "message",
           "variant": "cursor",
-          "x": 0.5236111111111111,
-          "y": 0.5294401041666666,
+          "x": 0.1,
+          "y": 0.86,
           "text": "The architecture of **Traffic Incident Management**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy.",
           "advancesStep": true,
           "textAlign": "left",
-          "anchor": "auto",
+          "anchor": "right",
           "showNavigation": true,
           "showMessage": true
         }
@@ -215,7 +215,7 @@
       "id": "flow-2",
       "background": {
         "type": "image",
-        "src": "assets/flow-screen-002.webp",
+        "src": "assets/flow-screen-002-71582623.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -247,7 +247,7 @@
       "id": "flow-3",
       "background": {
         "type": "image",
-        "src": "assets/flow-screen-003.webp",
+        "src": "assets/flow-screen-003-37639316.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -279,7 +279,7 @@
       "id": "flow-4",
       "background": {
         "type": "image",
-        "src": "assets/flow-screen-004.webp",
+        "src": "assets/flow-screen-004-9a5faf56.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -348,7 +348,7 @@
       "id": "saif-1",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-001.webp",
+        "src": "assets/saif-screen-001-9b82374a.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Blueprints",
@@ -380,7 +380,7 @@
       "id": "saif-2",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-002.webp",
+        "src": "assets/saif-screen-002-a9bf6f3b.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Blueprints",
@@ -412,7 +412,7 @@
       "id": "saif-3",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-003.webp",
+        "src": "assets/saif-screen-003-ca7ce3d9.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime",
@@ -444,7 +444,7 @@
       "id": "saif-4",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-004.webp",
+        "src": "assets/saif-screen-004-d1b9eefa.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime",
@@ -476,7 +476,7 @@
       "id": "saif-5",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-005.webp",
+        "src": "assets/saif-screen-005-7baa7662.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime",
@@ -508,7 +508,7 @@
       "id": "saif-6",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-006.webp",
+        "src": "assets/saif-screen-006-f9604cb0.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime",
@@ -540,7 +540,7 @@
       "id": "saif-7",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-007.webp",
+        "src": "assets/saif-screen-007-6357b07a.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime",
@@ -572,7 +572,7 @@
       "id": "saif-10",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-010.webp",
+        "src": "assets/saif-screen-010-b0ef9075.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Workloads",
@@ -641,7 +641,7 @@
       "id": "fleet-1",
       "background": {
         "type": "image",
-        "src": "assets/fleet-screen-001.webp",
+        "src": "assets/fleet-screen-001-433410eb.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - Continuous Delivery - Bundles",
@@ -673,7 +673,7 @@
       "id": "fleet-2",
       "background": {
         "type": "image",
-        "src": "assets/fleet-screen-002.webp",
+        "src": "assets/fleet-screen-002-73c9b8f4.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - Continuous Delivery - Bundle",
@@ -742,7 +742,7 @@
       "id": "device-1",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-001.webp",
+        "src": "assets/device-screen-001-2c1c9790.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -774,7 +774,7 @@
       "id": "device-2",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-002.webp",
+        "src": "assets/device-screen-002-d5bdf291.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -806,7 +806,7 @@
       "id": "device-3",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-003.webp",
+        "src": "assets/device-screen-003-7eb72efc.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -838,7 +838,7 @@
       "id": "device-4",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-004.webp",
+        "src": "assets/device-screen-004-07096e15.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -870,7 +870,7 @@
       "id": "device-5",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-005.webp",
+        "src": "assets/device-screen-005-525a0a02.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -902,7 +902,7 @@
       "id": "device-6",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-006.webp",
+        "src": "assets/device-screen-006-4864f4fe.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -971,7 +971,7 @@
       "id": "rancher-1",
       "background": {
         "type": "image",
-        "src": "assets/rancher-screen-001.webp",
+        "src": "assets/rancher-screen-001-c9915c22.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Workloads",
@@ -1003,7 +1003,7 @@
       "id": "rancher-2",
       "background": {
         "type": "image",
-        "src": "assets/rancher-screen-002.webp",
+        "src": "assets/rancher-screen-002-527d0148.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Workloads",
@@ -1035,7 +1035,7 @@
       "id": "rancher-3",
       "background": {
         "type": "image",
-        "src": "assets/rancher-screen-003.webp",
+        "src": "assets/rancher-screen-003-9d683410.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - spark-8528 - Namespace",
@@ -1067,7 +1067,7 @@
       "id": "rancher-4",
       "background": {
         "type": "image",
-        "src": "assets/rancher-screen-004.webp",
+        "src": "assets/rancher-screen-004-9d683410.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - spark-8528 - Namespace",
@@ -1099,7 +1099,7 @@
       "id": "rancher-5",
       "background": {
         "type": "image",
-        "src": "assets/rancher-screen-005.webp",
+        "src": "assets/rancher-screen-005-18637da8.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - spark-8528 - Deployment",
@@ -1168,7 +1168,7 @@
       "id": "observability-1",
       "background": {
         "type": "image",
-        "src": "assets/observability-screen-001.webp",
+        "src": "assets/observability-screen-001-4724096b.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Blueprints - Views | SUSE Observability",
@@ -1200,7 +1200,7 @@
       "id": "observability-2",
       "background": {
         "type": "image",
-        "src": "assets/observability-screen-002.webp",
+        "src": "assets/observability-screen-002-9aa48088.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Components | SUSE Observability",
@@ -1232,7 +1232,7 @@
       "id": "observability-3",
       "background": {
         "type": "image",
-        "src": "assets/observability-screen-003.webp",
+        "src": "assets/observability-screen-003-ca0b0eb4.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Blueprint: Traffic Incident Management - Views | SUSE Observability",

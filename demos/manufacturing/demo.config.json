@@ -198,7 +198,7 @@
       "id": "flow-1",
       "background": {
         "type": "image",
-        "src": "assets/flow-screen-001.webp",
+        "src": "assets/flow-screen-001-3949d60d.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -214,12 +214,12 @@
           "id": "s1_cursor",
           "type": "message",
           "variant": "cursor",
-          "x": 0.5236111111111111,
-          "y": 0.5294401041666666,
+          "x": 0.93,
+          "y": 0.82,
           "text": "The architecture of **Factory Operations & Visual Inspection**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy.",
           "advancesStep": true,
           "textAlign": "left",
-          "anchor": "auto",
+          "anchor": "left",
           "showNavigation": true,
           "showMessage": true
         }
@@ -230,7 +230,7 @@
       "id": "flow-2",
       "background": {
         "type": "image",
-        "src": "assets/flow-screen-002.webp",
+        "src": "assets/flow-screen-002-5558d1ab.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -262,7 +262,7 @@
       "id": "flow-3",
       "background": {
         "type": "image",
-        "src": "assets/flow-screen-003.webp",
+        "src": "assets/flow-screen-003-b5df9b0e.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -294,7 +294,7 @@
       "id": "flow-4",
       "background": {
         "type": "image",
-        "src": "assets/flow-screen-004.webp",
+        "src": "assets/flow-screen-004-299dfcc5.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -363,7 +363,7 @@
       "id": "saif-1",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-001.webp",
+        "src": "assets/saif-screen-001-8e433b08.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Blueprints",
@@ -395,7 +395,7 @@
       "id": "saif-2",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-002.webp",
+        "src": "assets/saif-screen-002-504a1961.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Blueprints",
@@ -427,7 +427,7 @@
       "id": "saif-3",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-003.webp",
+        "src": "assets/saif-screen-003-448fe3a1.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime",
@@ -459,7 +459,7 @@
       "id": "saif-4",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-004.webp",
+        "src": "assets/saif-screen-004-8e987d23.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime",
@@ -491,7 +491,7 @@
       "id": "saif-5",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-005.webp",
+        "src": "assets/saif-screen-005-749497aa.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime",
@@ -523,7 +523,7 @@
       "id": "saif-6",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-006.webp",
+        "src": "assets/saif-screen-006-b3d27b22.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime",
@@ -555,7 +555,7 @@
       "id": "saif-7",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-007.webp",
+        "src": "assets/saif-screen-007-d07a97aa.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime",
@@ -587,7 +587,7 @@
       "id": "saif-10",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-010.webp",
+        "src": "assets/saif-screen-010-53a462b1.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Workloads",
@@ -656,7 +656,7 @@
       "id": "fleet-1",
       "background": {
         "type": "image",
-        "src": "assets/fleet-screen-001.webp",
+        "src": "assets/fleet-screen-001-2aa8a9b1.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - Continuous Delivery - Bundles",
@@ -688,7 +688,7 @@
       "id": "fleet-2",
       "background": {
         "type": "image",
-        "src": "assets/fleet-screen-002.webp",
+        "src": "assets/fleet-screen-002-603e3066.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - Continuous Delivery - Bundle",
@@ -757,7 +757,7 @@
       "id": "device-1",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-001.webp",
+        "src": "assets/device-screen-001-47b99c0d.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -789,7 +789,7 @@
       "id": "device-2",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-002.webp",
+        "src": "assets/device-screen-002-52ea552d.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -821,7 +821,7 @@
       "id": "device-3",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-003.webp",
+        "src": "assets/device-screen-003-50516e59.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -853,7 +853,7 @@
       "id": "device-4",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-004.webp",
+        "src": "assets/device-screen-004-c8ac42d8.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -885,7 +885,7 @@
       "id": "device-5",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-005.webp",
+        "src": "assets/device-screen-005-39b96fc8.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -917,7 +917,7 @@
       "id": "device-6",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-006.webp",
+        "src": "assets/device-screen-006-2535ffb6.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -949,7 +949,7 @@
       "id": "device-7",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-007.webp",
+        "src": "assets/device-screen-007-863697e6.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -981,7 +981,7 @@
       "id": "device-8",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-008.webp",
+        "src": "assets/device-screen-008-a91e71b5.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1013,7 +1013,7 @@
       "id": "device-9",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-009.webp",
+        "src": "assets/device-screen-009-6b7905fa.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1045,7 +1045,7 @@
       "id": "device-10",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-010.webp",
+        "src": "assets/device-screen-010-a7669a24.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1077,7 +1077,7 @@
       "id": "device-11",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-011.webp",
+        "src": "assets/device-screen-011-634889bd.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1109,7 +1109,7 @@
       "id": "device-12",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-012.webp",
+        "src": "assets/device-screen-012-7aafdc15.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1141,7 +1141,7 @@
       "id": "device-13",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-013.webp",
+        "src": "assets/device-screen-013-712ed6e6.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1173,7 +1173,7 @@
       "id": "device-14",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-014.webp",
+        "src": "assets/device-screen-014-d985a094.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1205,7 +1205,7 @@
       "id": "device-15",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-015.webp",
+        "src": "assets/device-screen-015-75f83d0b.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1237,7 +1237,7 @@
       "id": "device-16",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-016.webp",
+        "src": "assets/device-screen-016-ac562190.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1269,7 +1269,7 @@
       "id": "device-17",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-017.webp",
+        "src": "assets/device-screen-017-bb074106.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1301,7 +1301,7 @@
       "id": "device-18",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-018.webp",
+        "src": "assets/device-screen-018-f1e4d15e.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1333,7 +1333,7 @@
       "id": "device-19",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-019.webp",
+        "src": "assets/device-screen-019-f2d71074.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1365,7 +1365,7 @@
       "id": "device-20",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-020.webp",
+        "src": "assets/device-screen-020-7162122e.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1397,7 +1397,7 @@
       "id": "device-21",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-021.webp",
+        "src": "assets/device-screen-021-0902004b.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -1466,7 +1466,7 @@
       "id": "rancher-1",
       "background": {
         "type": "image",
-        "src": "assets/rancher-screen-001.webp",
+        "src": "assets/rancher-screen-001-be0501c9.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Workloads",
@@ -1498,7 +1498,7 @@
       "id": "rancher-2",
       "background": {
         "type": "image",
-        "src": "assets/rancher-screen-002.webp",
+        "src": "assets/rancher-screen-002-bb3a47af.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Workloads",
@@ -1530,7 +1530,7 @@
       "id": "rancher-3",
       "background": {
         "type": "image",
-        "src": "assets/rancher-screen-003.webp",
+        "src": "assets/rancher-screen-003-9863109f.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - spark-8528 - Namespace",
@@ -1562,7 +1562,7 @@
       "id": "rancher-4",
       "background": {
         "type": "image",
-        "src": "assets/rancher-screen-004.webp",
+        "src": "assets/rancher-screen-004-9863109f.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - spark-8528 - Namespace",
@@ -1594,7 +1594,7 @@
       "id": "rancher-5",
       "background": {
         "type": "image",
-        "src": "assets/rancher-screen-005.webp",
+        "src": "assets/rancher-screen-005-fe59d2c5.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - spark-8528 - Deployment",
@@ -1663,7 +1663,7 @@
       "id": "observability-1",
       "background": {
         "type": "image",
-        "src": "assets/observability-screen-001.webp",
+        "src": "assets/observability-screen-001-f2073607.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Blueprints - Views | SUSE Observability",
@@ -1695,7 +1695,7 @@
       "id": "observability-2",
       "background": {
         "type": "image",
-        "src": "assets/observability-screen-002.webp",
+        "src": "assets/observability-screen-002-78390645.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Components | SUSE Observability",
@@ -1727,7 +1727,7 @@
       "id": "observability-3",
       "background": {
         "type": "image",
-        "src": "assets/observability-screen-003.webp",
+        "src": "assets/observability-screen-003-ba50ac98.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Blueprint: Factory Operations & Visual Inspection - Views | SUSE Observability",

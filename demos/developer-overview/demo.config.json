@@ -149,7 +149,7 @@
       "id": "device-1",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-001.webp",
+        "src": "assets/device-screen-001-bfa86644.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -181,7 +181,7 @@
       "id": "device-2",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-002.webp",
+        "src": "assets/device-screen-002-9198bdf9.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -213,7 +213,7 @@
       "id": "device-3",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-003.webp",
+        "src": "assets/device-screen-003-6de4eb94.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -245,7 +245,7 @@
       "id": "device-4",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-004.webp",
+        "src": "assets/device-screen-004-6de4eb94.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -277,7 +277,7 @@
       "id": "device-5",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-005.webp",
+        "src": "assets/device-screen-005-a53c1239.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -309,7 +309,7 @@
       "id": "device-6",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-006.webp",
+        "src": "assets/device-screen-006-a53c1239.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -341,7 +341,7 @@
       "id": "device-7",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-007.webp",
+        "src": "assets/device-screen-007-da094e45.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -373,7 +373,7 @@
       "id": "device-8",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-008.webp",
+        "src": "assets/device-screen-008-8a17d737.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -405,7 +405,7 @@
       "id": "device-9",
       "background": {
         "type": "image",
-        "src": "assets/device-screen-009.webp",
+        "src": "assets/device-screen-009-17b898c1.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "SUSE AI Factory for Developers",
@@ -474,7 +474,7 @@
       "id": "saif-1",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-001.webp",
+        "src": "assets/saif-screen-001-a6f6a4b2.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Overview",
@@ -506,7 +506,7 @@
       "id": "saif-2",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-002.webp",
+        "src": "assets/saif-screen-002-4103574f.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Apps",
@@ -538,7 +538,7 @@
       "id": "saif-3",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-003.webp",
+        "src": "assets/saif-screen-003-b7fa855f.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Blueprints",
@@ -570,7 +570,7 @@
       "id": "saif-4",
       "background": {
         "type": "image",
-        "src": "assets/saif-screen-004.webp",
+        "src": "assets/saif-screen-004-d6b98f1f.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Rancher Prime - SUSE AI Factory - Workloads",
@@ -639,7 +639,7 @@
       "id": "observability-1",
       "background": {
         "type": "image",
-        "src": "assets/observability-screen-001.webp",
+        "src": "assets/observability-screen-001-1c73a0e8.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "Blueprints - Views | SUSE Observability",
@@ -671,7 +671,7 @@
       "id": "observability-2",
       "background": {
         "type": "image",
-        "src": "assets/observability-screen-002.webp",
+        "src": "assets/observability-screen-002-f63ab699.webp",
         "naturalWidth": 2880,
         "naturalHeight": 1800,
         "alt": "LLM Models - Views | SUSE Observability",

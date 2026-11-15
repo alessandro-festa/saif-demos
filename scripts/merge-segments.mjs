@@ -8,7 +8,7 @@
 // wrote. The copy lives in the story, so a segment can be re-recorded and
 // re-merged without losing it.
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
-import { randomBytes } from 'node:crypto';
+import { createHash, randomBytes } from 'node:crypto';
 import { basename, join } from 'node:path';
 
 const root = new URL('..', import.meta.url).pathname;
@@ -102,11 +102,13 @@ for (const chapter of story.chapters) {
       s.id = id;
       if (edit.label) s.label = edit.label;
 
-      // Media: prefix with the segment so names never clash.
+      // Media: prefix with the segment so names never clash, and name by content:
+      // Pages lets browsers keep images 10 minutes, a re-recorded screen gets a new URL.
       for (const key of ['src', 'posterSrc']) {
         const src = s.background?.[key];
         if (!src || /^(https?:|data:|blob:|\/)/.test(src)) continue;
-        const name = `${segment.name}-${basename(src)}`;
+        const hash = createHash('sha256').update(readFileSync(join(dir, src))).digest('hex').slice(0, 8);
+        const name = `${segment.name}-${basename(src).replace(/(\.[^.]+)$/, `-${hash}$1`)}`;
         copyFileSync(join(dir, src), join(out, 'assets', name));
         s.background[key] = `assets/${name}`;
       }

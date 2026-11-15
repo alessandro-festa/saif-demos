@@ -12,7 +12,10 @@
           "name": "flow",
           "steps": {
             "1": {
-              "text": "The architecture of **Traffic Incident Management**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy."
+              "text": "The architecture of **Traffic Incident Management**, as the Studio draws it: the agent in its **NVIDIA OpenShell sandbox**, the systems it works with, the shared **NVIDIA** models and the people who decide. Green lines are allowed, red ones refused by the sandbox's policy.",
+              "x": 0.1,
+              "y": 0.86,
+              "anchor": "right"
             },
             "2": {
               "text": "The **agent**: a NeMo Agent Toolkit agent, packaged as one component of the Blueprint. Its sandbox, providers and policy deploy with it."
