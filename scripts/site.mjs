@@ -31,7 +31,7 @@ function thumb(slug) {
 // "All demos" back to the start page wherever the site is hosted.
 const brandLogos =
   '<a href="../" class="demo-page-btn suse-brand-logos" aria-label="All demos">' +
-  '<img src="../brand/suse-logo-light.png" alt="SUSE" /><span class="suse-brand-sep" aria-hidden="true"></span>' +
+  '<img src="../brand/suse-logo-paired.png" alt="SUSE" /><span class="suse-brand-sep" aria-hidden="true"></span>' +
   '<img src="../brand/nvidia-logo-light.png" alt="NVIDIA" /></a>';
 
 for (const d of built) {
